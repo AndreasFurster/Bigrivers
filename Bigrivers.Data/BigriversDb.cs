@@ -22,7 +22,12 @@ namespace Bigrivers.Data
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         public virtual DbSet<Artist> Artists { get; set; }
-        public virtual DbSet<Show> Shows { get; set; }
+        public virtual DbSet<Event> Events { get; set; }
+        public virtual DbSet<Genre> Genres { get; set; }
         public virtual DbSet<Location> Locations { get; set; }
+        public virtual DbSet<NewsItem> NewsItems { get; set; }
+        public virtual DbSet<Performance> Performances { get; set; }
+        public virtual DbSet<Page> Pages { get; set; }
+        public virtual DbSet<Sponsor> Sponsors { get; set; }
     }
 }
