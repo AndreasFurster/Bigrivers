@@ -18,7 +18,8 @@ namespace Bigrivers.Model
         public decimal Price { get; set; }
         public bool TicketRequired { get; set; }      
         public bool Status { get; set; }
-        public List<Performance> Performances { get; set; }
+
+        public virtual List<Performance> Performances { get; set; }
         public virtual Location Location { get; set; }
 
     }

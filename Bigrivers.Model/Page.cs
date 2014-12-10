@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Bigrivers.Model
 {
-    public class Genre
+    public class Page
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-
-        public virtual List<Artist> Artists { get; set; }
+        public string Title { get; set; }
+        public string Content { get; set; }
+        public bool Status { get; set; }
     }
 }
