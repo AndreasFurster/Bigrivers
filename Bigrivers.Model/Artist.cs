@@ -10,18 +10,17 @@ namespace Bigrivers.Model
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public virtual List<string> Messages { get; set; }
+        public string Description { get; set; }
+        public string Avatar { get; set; }
+        public string YoutubeChannel { get; set; }
+        public string Website { get; set; }
+        public string Facebook { get; set; }
+        public string Twitter { get; set; }
 
-        public Artist(int id, string name)
-        {
-            this.Messages = new List<string>();
-            this.Id = id;
-            this.Name = name;
-        }
 
-        public void AddMessage(string message)
-        {
-            this.Messages.Add(message);
-        }
+        public virtual string Genre { get; set; }
+
+        public virtual List<Performance> Performances { get; set; }
+        public virtual List<Genre> Genres { get; set; }
     }
 }
