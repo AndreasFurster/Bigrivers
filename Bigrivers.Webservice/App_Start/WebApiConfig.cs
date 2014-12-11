@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Formatting;
+﻿using System.Net.Http.Headers;
 using System.Web.Http;
-using Newtonsoft.Json.Serialization;
-using System.Net.Http.Headers;
 
-namespace Bigrivers.Webservice
+namespace Bigrivers.Server.Webservice
 {
     public static class WebApiConfig
     {
@@ -16,7 +11,7 @@ namespace Bigrivers.Webservice
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-            
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",

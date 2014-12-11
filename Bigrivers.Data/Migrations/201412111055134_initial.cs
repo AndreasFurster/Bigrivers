@@ -1,4 +1,4 @@
-namespace Bigrivers.Data.Migrations
+namespace Bigrivers.Server.Data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

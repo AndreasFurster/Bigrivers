@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bigrivers.Model
+namespace Bigrivers.Server.Model
 {
     public class Genre
     {
