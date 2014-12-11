@@ -21,23 +21,9 @@ namespace Bigrivers.Webservice.Controllers
         {
             List<Artist> l = new List<Artist>();
 
-            Artist a = new Artist(1, "U2");
-            a.AddMessage("U2 rocks...");
-            Artist b = new Artist(2, "Sting");
-            b.AddMessage("New album in 2015?!");
-            b.AddMessage("Best artist ever.");
-            Artist c = new Artist(3, "Pearl Jam");
-
-            l.Add(a);
-            l.Add(b);
-            l.Add(c);
-
-            using (BigriversDb x = new BigriversDb())
+            using (BigriversDb ctx = new BigriversDb())
             {
-                x.Artists.Add(a);
-                x.Artists.Add(b);
-                x.Artists.Add(c);
-                x.SaveChanges();
+                l = ctx.Artists.ToList();
             }
 
             return l;

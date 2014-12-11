@@ -44,8 +44,10 @@
     <Compile Include="Genre.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="NewsItem.cs" />
+    <Compile Include="Page.cs" />
     <Compile Include="Performance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sponsor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
