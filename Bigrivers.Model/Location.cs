@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,6 +16,9 @@ namespace Bigrivers.Model
         public string Zipcode { get; set; }
         public string City { get; set; }
         public string Stagename { get; set; }
+
+        [DefaultValue(true)]
+        public bool Status { get; set; }
 
         public virtual List<Event> Events { get; set; }
 

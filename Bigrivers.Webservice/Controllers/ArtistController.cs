@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -19,14 +20,31 @@ namespace Bigrivers.Webservice.Controllers
         [HttpGet]
         public List<Artist> Index()
         {
-            List<Artist> l = new List<Artist>();
+            //Artist art = new Artist();
+            //art.Description = "Dit is een voorbeeldje.";
+
+
+            //Performance perf = new Performance
+            //{
+            //    Start = DateTime.Now,
+            //    End = DateTime.Now.AddDays(1),
+            //    Status = true,
+            //    Description = "Descr"
+            //};
+
+            //perf.Artist = art;
+            //perf.Event = null;
+
+            //art.Performances = new List<Performance>();
+            //art.Performances.Add(perf);
+
 
             using (BigriversDb ctx = new BigriversDb())
             {
-                l = ctx.Artists.ToList();
+                return ctx.Artists
+                    .Where(a => a.Status)
+                    .ToList();
             }
-
-            return l;
         }
     }
 }

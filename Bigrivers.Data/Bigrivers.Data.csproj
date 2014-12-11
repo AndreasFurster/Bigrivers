@@ -51,6 +51,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BigriversDb.cs" />
+    <Compile Include="Migrations\201412111055134_initial.cs" />
+    <Compile Include="Migrations\201412111055134_initial.Designer.cs">
+      <DependentUpon>201412111055134_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201412111107375_AddedStatusAndDefaults.cs" />
+    <Compile Include="Migrations\201412111107375_AddedStatusAndDefaults.Designer.cs">
+      <DependentUpon>201412111107375_AddedStatusAndDefaults.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,6 +71,14 @@
       <Project>{6cf12e3b-53d8-46e9-8fc6-b241a645877c}</Project>
       <Name>Bigrivers.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201412111055134_initial.resx">
+      <DependentUpon>201412111055134_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412111107375_AddedStatusAndDefaults.resx">
+      <DependentUpon>201412111107375_AddedStatusAndDefaults.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

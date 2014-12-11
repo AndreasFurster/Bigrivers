@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,8 @@ namespace Bigrivers.Model
         public string Facebook { get; set; }
         public string Twitter { get; set; }
 
+        [DefaultValue(true)]
+        public bool Status { get; set; }
 
         public virtual string Genre { get; set; }
 

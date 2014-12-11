@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,8 @@ namespace Bigrivers.Model
         public DateTime Start { get; set; }
         public DateTime End { get; set; }
         public decimal Price { get; set; }
-        public bool TicketRequired { get; set; }      
+        public bool TicketRequired { get; set; }
+        [DefaultValue(true)]
         public bool Status { get; set; }
 
         public virtual List<Performance> Performances { get; set; }

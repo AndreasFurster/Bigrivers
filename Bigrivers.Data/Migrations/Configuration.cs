@@ -9,7 +9,7 @@ namespace Bigrivers.Data.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(Bigrivers.Data.BigriversDb context)
