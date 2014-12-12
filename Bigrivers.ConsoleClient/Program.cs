@@ -22,7 +22,6 @@ namespace Bigrivers.ConsoleClient
 
             // pause
             Console.ReadLine();
-
         }
 
 

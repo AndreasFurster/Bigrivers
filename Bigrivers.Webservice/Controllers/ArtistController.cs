@@ -20,27 +20,30 @@ namespace Bigrivers.Webservice.Controllers
         [HttpGet]
         public List<Artist> Index()
         {
-            //Artist art = new Artist();
-            //art.Description = "Dit is een voorbeeldje.";
+            Artist art = new Artist();
+            Performance perf = new Performance();
 
+            art.Name = "Queen";
+            art.Description = "Best group ever (to some people)";
 
-            //Performance perf = new Performance
-            //{
-            //    Start = DateTime.Now,
-            //    End = DateTime.Now.AddDays(1),
-            //    Status = true,
-            //    Description = "Descr"
-            //};
+            art.Performances = new List<Performance>();
+            art.Performances.Add(perf);
+            
+            perf.Start = DateTime.Now;
+            perf.End = DateTime.Now.AddDays(1);
+            perf.Status = true;
+            perf.Description = "Descr";
 
-            //perf.Artist = art;
-            //perf.Event = null;
-
-            //art.Performances = new List<Performance>();
-            //art.Performances.Add(perf);
+            perf.Artist = art;
+            perf.Event = null;
 
 
             using (BigriversDb ctx = new BigriversDb())
             {
+                ctx.Artists.Add(art);
+                ctx.Performances.Add(perf);
+                ctx.SaveChanges();
+
                 return ctx.Artists
                     .Where(a => a.Status)
                     .ToList();
