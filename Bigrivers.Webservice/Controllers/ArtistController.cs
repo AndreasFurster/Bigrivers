@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Net;
@@ -28,7 +29,7 @@ namespace Bigrivers.Webservice.Controllers
 
             art.Performances = new List<Performance>();
             art.Performances.Add(perf);
-            
+
             perf.Start = DateTime.Now;
             perf.End = DateTime.Now.AddDays(1);
             perf.Status = true;
@@ -44,9 +45,12 @@ namespace Bigrivers.Webservice.Controllers
                 ctx.Performances.Add(perf);
                 ctx.SaveChanges();
 
-                return ctx.Artists
+                List<Artist> artists = ctx.Artists
+                    .Include(a => a.Performances)
                     .Where(a => a.Status)
                     .ToList();
+
+                return artists;
             }
         }
     }
