@@ -67,7 +67,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bigrivers.Model\Bigrivers.Server.Model.csproj">
+    <ProjectReference Include="..\Bigrivers.Server.Model\Bigrivers.Server.Model.csproj">
       <Project>{6cf12e3b-53d8-46e9-8fc6-b241a645877c}</Project>
       <Name>Bigrivers.Server.Model</Name>
     </ProjectReference>
