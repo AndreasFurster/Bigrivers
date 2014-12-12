@@ -16,9 +16,9 @@ namespace Bigrivers.Webservice
 
             // Web API routes
             config.MapHttpAttributeRoutes();
-            
+
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
+                name: "Api",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
