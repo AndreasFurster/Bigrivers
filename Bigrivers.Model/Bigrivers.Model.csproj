@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{063602A2-914A-4028-BBC0-7BE8C8D76A87}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{6CF12E3B-53D8-46E9-8FC6-B241A645877C}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Bigrivers.Client.ConsoleClient</RootNamespace>
-    <AssemblyName>Bigrivers.Client.ConsoleClient</AssemblyName>
+    <RootNamespace>Bigrivers.Model</RootNamespace>
+    <AssemblyName>Bigrivers.Model</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,11 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,19 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Communicator.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Artist.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="Genre.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="NewsItem.cs" />
+    <Compile Include="Page.cs" />
+    <Compile Include="Performance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Bigrivers.Model\Bigrivers.Server.Model.csproj">
-      <Project>{6cf12e3b-53d8-46e9-8fc6-b241a645877c}</Project>
-      <Name>Bigrivers.Server.Model</Name>
-    </ProjectReference>
+    <Compile Include="Sponsor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

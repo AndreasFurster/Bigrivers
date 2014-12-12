@@ -6,7 +6,7 @@ using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bigrivers.Server.Model
+namespace Bigrivers.Model
 {
     public class Location
     {

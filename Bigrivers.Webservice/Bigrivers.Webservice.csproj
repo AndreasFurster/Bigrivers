@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Bigrivers.Server.Webservice</RootNamespace>
-    <AssemblyName>Bigrivers.Server.Webservice</AssemblyName>
+    <RootNamespace>Bigrivers.Webservice</RootNamespace>
+    <AssemblyName>Bigrivers.Webservice</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -107,13 +107,13 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bigrivers.Data\Bigrivers.Server.Data.csproj">
+    <ProjectReference Include="..\Bigrivers.Data\Bigrivers.Data.csproj">
       <Project>{26178f23-ab38-4b96-89f9-04b580c660db}</Project>
-      <Name>Bigrivers.Server.Data</Name>
+      <Name>Bigrivers.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Bigrivers.Model\Bigrivers.Server.Model.csproj">
+    <ProjectReference Include="..\Bigrivers.Model\Bigrivers.Model.csproj">
       <Project>{6cf12e3b-53d8-46e9-8fc6-b241a645877c}</Project>
-      <Name>Bigrivers.Server.Model</Name>
+      <Name>Bigrivers.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

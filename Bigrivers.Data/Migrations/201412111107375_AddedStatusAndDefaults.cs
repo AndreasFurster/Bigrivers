@@ -1,8 +1,8 @@
-namespace Bigrivers.Server.Data.Migrations
+namespace Bigrivers.Data.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-
+    
     public partial class AddedStatusAndDefaults : DbMigration
     {
         public override void Up()
@@ -10,7 +10,7 @@ namespace Bigrivers.Server.Data.Migrations
             AddColumn("dbo.Artists", "Status", c => c.Boolean(nullable: false));
             AddColumn("dbo.Locations", "Status", c => c.Boolean(nullable: false));
         }
-
+        
         public override void Down()
         {
             DropColumn("dbo.Locations", "Status");

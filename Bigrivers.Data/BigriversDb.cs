@@ -1,13 +1,15 @@
-using System.Data.Entity;
-using Bigrivers.Server.Model;
-
-namespace Bigrivers.Server.Data
+namespace Bigrivers.Data
 {
+    using System;
+    using System.Data.Entity;
+    using System.Linq;
+    using Bigrivers.Model;
+
     public class BigriversDb : DbContext
     {
         // Your context has been configured to use a 'Model' connection string from your application's 
         // configuration file (App.config or Web.config). By default, this connection string targets the 
-        // 'Bigrivers.Server.Data.Model' database on your LocalDb instance. 
+        // 'Bigrivers.Data.Model' database on your LocalDb instance. 
         // 
         // If you wish to target a different database and/or database provider, modify the 'Model' 
         // connection string in the application configuration file.
