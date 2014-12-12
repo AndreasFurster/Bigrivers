@@ -1,5 +1,8 @@
-﻿using System.Net.Http.Headers;
-using System.Web.Http;
+﻿using System.Web.Http;
+using Newtonsoft.Json.Serialization;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
+using System.Net.Http.Formatting;
 
 namespace Bigrivers.Server.Webservice
 {
@@ -13,14 +16,19 @@ namespace Bigrivers.Server.Webservice
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
+                name: "Api",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(
-                new MediaTypeHeaderValue("text/html"));
+            // Remove XML formatter to prevent XML output
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
 
+            // Adding JSON formatter
+            JsonMediaTypeFormatter jmf = config.Formatters.JsonFormatter;
+            jmf.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+
+            config.Formatters.Add(jmf);
         }
     }
 }
