@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using System.Web.Script.Serialization;
-using System.Web.Script.Services;
-using System.Web.Services;
-using Bigrivers.Model;
-using Bigrivers.Data;
+using Bigrivers.Server.Model;
+using Bigrivers.Server.Data;
+using System;
 
-namespace Bigrivers.Webservice.Controllers
+namespace Bigrivers.Server.Webservice.Controllers
 {
     // default way to reach this controller is:
     // localhost/api/Artist/Index
@@ -42,8 +36,8 @@ namespace Bigrivers.Webservice.Controllers
             {
                 ctx.Artists.Add(art);
                 ctx.Performances.Add(perf);
-                ctx.SaveChanges();
 
+                ctx.SaveChanges();
                 return ctx.Artists
                     .Where(a => a.Status)
                     .ToList();

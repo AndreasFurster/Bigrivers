@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using Bigrivers.Model;
+using Bigrivers.Server.Model;
 using Newtonsoft.Json;
 
-namespace Bigrivers.ConsoleClient
+namespace Bigrivers.Client.ConsoleClient
 {
     public class Communicator
     {

@@ -1,18 +1,20 @@
-namespace Bigrivers.Data.Migrations
+using Bigrivers.Server.Data;
+
+namespace Bigrivers.Server.Data.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Bigrivers.Data.BigriversDb>
+    internal sealed class Configuration : DbMigrationsConfiguration<BigriversDb>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Bigrivers.Data.BigriversDb context)
+        protected override void Seed(BigriversDb context)
         {
             //  This method will be called after migrating to the latest version.
 
