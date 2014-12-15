@@ -22,34 +22,27 @@ namespace Bigrivers.Server.Webservice
                 model: GetModel()
             );
 
-            config.Routes.MapHttpRoute(
-                name: "Api",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+            //// Remove XML formatter to prevent XML output
+            //config.Formatters.Remove(config.Formatters.XmlFormatter);
 
-            // Remove XML formatter to prevent XML output
-            config.Formatters.Remove(config.Formatters.XmlFormatter);
+            //// Adding JSON formatter
+            //JsonMediaTypeFormatter jmf = config.Formatters.JsonFormatter;
+            //jmf.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
 
-            // Adding JSON formatter
-            JsonMediaTypeFormatter jmf = config.Formatters.JsonFormatter;
-            jmf.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-
-            config.Formatters.Add(jmf);
+            //config.Formatters.Add(jmf);
         }
 
         public static IEdmModel GetModel()
         {
             ODataModelBuilder builder = new ODataConventionModelBuilder();
 
-            builder.EntitySet<Artist>("Artists");
-            builder.EntitySet<Event>("Events");
-            builder.EntitySet<Genre>("Genres");
-            builder.EntitySet<Location>("Locations");
-            builder.EntitySet<NewsItem>("NewsItems");
-            builder.EntitySet<Page>("Pages");
-            builder.EntitySet<Sponsor>("Sponsors");
-
+            builder.EntitySet<Artist>("Artist");
+            builder.EntitySet<Event>("Event");
+            builder.EntitySet<Genre>("Genre");
+            builder.EntitySet<Location>("Location");
+            //builder.EntitySet<NewsItem>("NewsItem");
+            //builder.EntitySet<Page>("Page");
+            //builder.EntitySet<Sponsor>("Sponsor");
 
             return builder.GetEdmModel();
         }

@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.OData;
 using Bigrivers.Server.Model;
 using Bigrivers.Server.Data;
+using System.Data.Entity.Infrastructure;
 
 
 namespace Bigrivers.Server.Webservice.Controllers
@@ -14,12 +15,14 @@ namespace Bigrivers.Server.Webservice.Controllers
     // localhost/api/Artist/Index
     public class ArtistController : ODataController
     {
-        BigriversDb _ctx = new BigriversDb();
+        private readonly BigriversDb _ctx = new BigriversDb();
 
-        [Queryable]
-        public Artist GetArtist()
+        [EnableQuery]
+        public IQueryable<Artist> GetArtist()
         {
-
+            return _ctx.Artists
+                .Include(a => a.Performances)
+                .Include(a => a.Genres);
         }
 
     }
