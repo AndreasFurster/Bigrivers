@@ -14,8 +14,8 @@ namespace Bigrivers.Server.Model
         public string ShortDescription { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
-        public DateTime Start { get; set; }
-        public DateTime End { get; set; }
+        public DateTimeOffset Start { get; set; }
+        public DateTimeOffset End { get; set; }
         public decimal Price { get; set; }
         public bool TicketRequired { get; set; }
         [DefaultValue(true)]

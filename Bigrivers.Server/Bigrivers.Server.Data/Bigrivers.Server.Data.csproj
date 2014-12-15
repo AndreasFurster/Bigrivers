@@ -59,6 +59,10 @@
     <Compile Include="Migrations\201412111107375_AddedStatusAndDefaults.Designer.cs">
       <DependentUpon>201412111107375_AddedStatusAndDefaults.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201412151252022_DateTimes-to-DateTimeOffsets.cs" />
+    <Compile Include="Migrations\201412151252022_DateTimes-to-DateTimeOffsets.Designer.cs">
+      <DependentUpon>201412151252022_DateTimes-to-DateTimeOffsets.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -78,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201412111107375_AddedStatusAndDefaults.resx">
       <DependentUpon>201412111107375_AddedStatusAndDefaults.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201412151252022_DateTimes-to-DateTimeOffsets.resx">
+      <DependentUpon>201412151252022_DateTimes-to-DateTimeOffsets.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

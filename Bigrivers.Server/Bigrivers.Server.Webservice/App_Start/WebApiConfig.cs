@@ -9,25 +9,30 @@ namespace Bigrivers.Server.Webservice
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
-
             // Web API routes
             config.MapHttpAttributeRoutes();
 
-            config.Routes.MapHttpRoute(
-                name: "Api",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+            // Mapping OData routes
+            config.MapODataServiceRoute(
+                routeName: "OData",
+                routePrefix: "odata",
+                model: GetModel()
             );
+        }
 
-            // Remove XML formatter to prevent XML output
-            config.Formatters.Remove(config.Formatters.XmlFormatter);
+        public static IEdmModel GetModel()
+        {
+            ODataModelBuilder builder = new ODataConventionModelBuilder();
 
-            // Adding JSON formatter
-            JsonMediaTypeFormatter jmf = config.Formatters.JsonFormatter;
-            jmf.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            builder.EntitySet<Artist>("Artist");
+            builder.EntitySet<Event>("Event");
+            builder.EntitySet<Genre>("Genre");
+            builder.EntitySet<Location>("Location");
+            //builder.EntitySet<NewsItem>("NewsItem");
+            //builder.EntitySet<Page>("Page");
+            //builder.EntitySet<Sponsor>("Sponsor");
 
-            config.Formatters.Add(jmf);
+            return builder.GetEdmModel();
         }
     }
 }
