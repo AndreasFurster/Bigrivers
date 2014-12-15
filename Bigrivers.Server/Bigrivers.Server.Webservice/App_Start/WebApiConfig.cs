@@ -55,15 +55,14 @@ namespace Bigrivers.Server.Webservice
         {
             ODataModelBuilder builder = new ODataConventionModelBuilder();
 
-
-            //builder.EntitySet<Artist>("Artist");
-            //builder.EntitySet<Event>("Event");
-            //builder.EntitySet<Genre>("Genre");
-            //builder.EntitySet<Location>("Location");
-            //builder.EntitySet<NewsItem>("NewsItem");
-            //builder.EntitySet<Page>("Page");
-            //builder.EntitySet<Performance>("Performance");
-            //builder.EntitySet<Sponsor>("Sponsor");
+            builder.EntitySet<Artist>("Artist");
+            builder.EntitySet<Event>("Event");
+            builder.EntitySet<Genre>("Genre");
+            builder.EntitySet<Location>("Location");
+            builder.EntitySet<NewsItem>("NewsItem");
+            builder.EntitySet<Page>("Page");
+            builder.EntitySet<Performance>("Performance");
+            builder.EntitySet<Sponsor>("Sponsor");
 
             return builder.GetEdmModel();
         }
