@@ -13,30 +13,14 @@ namespace Bigrivers.Server.Webservice
     {
         public static void Register(HttpConfiguration config)
         {
-            //// Web API configuration and services
-
-            //// Web API routes
+            // Web API routes
             //config.MapHttpAttributeRoutes();
 
-            //config.Routes.MapHttpRoute(
-            //    name: "Api",
-            //    routeTemplate: "api/{controller}/{id}",
-            //    defaults: new { id = RouteParameter.Optional }
-            //);
-
-            //// Remove XML formatter to prevent XML output
-            //config.Formatters.Remove(config.Formatters.XmlFormatter);
-
-            //// Adding JSON formatter
-            //JsonMediaTypeFormatter jmf = config.Formatters.JsonFormatter;
-            //jmf.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-
-            //config.Formatters.Add(jmf);
-
-            /* ====== OData config ====== */
-
-            // Web API routes
-            config.MapHttpAttributeRoutes();
+            config.MapODataServiceRoute(
+                routeName: "OData",
+                routePrefix: "odata",
+                model: GetModel()
+            );
 
             config.Routes.MapHttpRoute(
                 name: "Api",
@@ -44,25 +28,28 @@ namespace Bigrivers.Server.Webservice
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            config.MapODataServiceRoute(
-                routeName: "ODataRoute",
-                routePrefix: null,
-                model: GetModel()
-            );
+            // Remove XML formatter to prevent XML output
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+
+            // Adding JSON formatter
+            JsonMediaTypeFormatter jmf = config.Formatters.JsonFormatter;
+            jmf.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+
+            config.Formatters.Add(jmf);
         }
 
         public static IEdmModel GetModel()
         {
             ODataModelBuilder builder = new ODataConventionModelBuilder();
 
-            builder.EntitySet<Artist>("Artist");
-            builder.EntitySet<Event>("Event");
-            builder.EntitySet<Genre>("Genre");
-            builder.EntitySet<Location>("Location");
-            builder.EntitySet<NewsItem>("NewsItem");
-            builder.EntitySet<Page>("Page");
-            builder.EntitySet<Performance>("Performance");
-            builder.EntitySet<Sponsor>("Sponsor");
+            builder.EntitySet<Artist>("Artists");
+            builder.EntitySet<Event>("Events");
+            builder.EntitySet<Genre>("Genres");
+            builder.EntitySet<Location>("Locations");
+            builder.EntitySet<NewsItem>("NewsItems");
+            builder.EntitySet<Page>("Pages");
+            builder.EntitySet<Sponsor>("Sponsors");
+
 
             return builder.GetEdmModel();
         }
