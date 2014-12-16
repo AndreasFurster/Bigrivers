@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
-using System.Web.Http;
 using System.Web.OData;
-using Bigrivers.Server.Model;
 using Bigrivers.Server.Data;
-using System.Data.Entity.Infrastructure;
-
+using Bigrivers.Server.Model;
 
 namespace Bigrivers.Server.Webservice.Controllers
 {
@@ -24,6 +19,5 @@ namespace Bigrivers.Server.Webservice.Controllers
                 .Include(a => a.Performances)
                 .Include(a => a.Genres);
         }
-
     }
 }

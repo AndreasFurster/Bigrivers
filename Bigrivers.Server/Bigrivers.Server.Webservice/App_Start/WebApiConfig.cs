@@ -1,7 +1,9 @@
 ﻿using System.Web.Http;
-using System.Net.Http.Headers;
-using Newtonsoft.Json;
-using System.Net.Http.Formatting;
+using System.Web.OData.Builder;
+using System.Web.OData.Extensions;
+using Bigrivers.Server.Model;
+using Microsoft.OData.Edm;
+
 
 namespace Bigrivers.Server.Webservice
 {

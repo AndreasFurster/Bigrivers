@@ -1,15 +1,14 @@
-﻿using System;
-using System.Data.Entity;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using System.Web.Http;
 using Bigrivers.Server.Data;
+using Bigrivers.Server.Webservice;
 using Microsoft.Owin;
 using Microsoft.Owin.Cors;
 using Owin;
 
-[assembly: OwinStartup(typeof(Bigrivers.Server.Webservice.App_Start.Startup))]
+[assembly: OwinStartup(typeof(Startup))]
 
-namespace Bigrivers.Server.Webservice.App_Start
+namespace Bigrivers.Server.Webservice
 {
     public class Startup
     {
