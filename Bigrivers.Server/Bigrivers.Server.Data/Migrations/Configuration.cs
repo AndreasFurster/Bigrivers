@@ -18,6 +18,12 @@ namespace Bigrivers.Server.Data.Migrations
 
         protected override void Seed(BigriversDb context)
         {
+            context.Artists.RemoveRange(context.Artists);
+            context.Events.RemoveRange(context.Events);
+            context.Performances.RemoveRange(context.Performances);
+            context.Genres.RemoveRange(context.Genres);
+            context.Locations.RemoveRange(context.Locations);
+
             // Create Genres
             Genre Rock = new Genre
             {
@@ -153,11 +159,15 @@ namespace Bigrivers.Server.Data.Migrations
             Pop.Artists.Add(JusBie);
             Pop.Artists.Add(BruMar);
 
-            context.Genres.AddOrUpdate();
-            context.Locations.AddOrUpdate();
-            context.Artists.AddOrUpdate();
-            context.Events.AddOrUpdate();
-            context.Performances.AddOrUpdate();
+            context.Genres.AddOrUpdate(Rock);
+            context.Genres.AddOrUpdate(Pop);
+
+            //context.Locations.AddOrUpdate();
+            //context.Artists.AddOrUpdate();
+            //context.Events.AddOrUpdate();
+            //context.Performances.AddOrUpdate();
+
+            context.SaveChanges();
         }
     }
 }
