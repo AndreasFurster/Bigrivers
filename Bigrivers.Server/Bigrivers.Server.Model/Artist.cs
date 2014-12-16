@@ -21,8 +21,6 @@ namespace Bigrivers.Server.Model
         [DefaultValue(true)]
         public bool Status { get; set; }
 
-        public virtual string Genre { get; set; }
-
         public virtual List<Performance> Performances { get; set; }
         public virtual List<Genre> Genres { get; set; }
     }
