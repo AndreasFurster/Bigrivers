@@ -16,7 +16,7 @@ namespace Bigrivers.Server.Webservice
 
             // Mapping OData routes
             config.MapODataServiceRoute(
-                routeName: "OData",
+                routeName: "odata",
                 routePrefix: "odata",
                 model: GetModel()
             );
@@ -26,13 +26,12 @@ namespace Bigrivers.Server.Webservice
         {
             ODataModelBuilder builder = new ODataConventionModelBuilder();
 
-            builder.EntitySet<Artist>("Artist");
-            builder.EntitySet<Event>("Event");
-            builder.EntitySet<Genre>("Genre");
-            builder.EntitySet<Location>("Location");
-            //builder.EntitySet<NewsItem>("NewsItem");
-            //builder.EntitySet<Page>("Page");
-            //builder.EntitySet<Sponsor>("Sponsor");
+            builder.EntitySet<Artist>("Artists");
+            builder.EntitySet<Event>("Events");
+            builder.EntitySet<Genre>("Genres");
+            builder.EntitySet<Location>("Locations");
+            builder.EntitySet<Performance>("Performances");
+            builder.EntitySet<Sponsor>("Sponsors");
 
             return builder.GetEdmModel();
         }
