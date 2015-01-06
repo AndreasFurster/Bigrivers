@@ -39,6 +39,7 @@ namespace Bigrivers.Client.ConsoleClient
                // Console.WriteLine("Artists received: " + l.Count.ToString() );
 
                 // Continue working with responseStream here...
+                Console.WriteLine("now lets implement conversion to objects...");
             }
         }
     }
