@@ -11,7 +11,7 @@ namespace Bigrivers.Client.ConsoleClient
     {
         public void HowToMakeRequestsToHttpBasedServices()
         {
-            Uri serviceUri = new Uri("http://localhost:54240/api/Artist/Index");
+            Uri serviceUri = new Uri("http://localhost:54240/odata/Artists");
             WebClient downloader = new WebClient();
             downloader.OpenReadCompleted += new OpenReadCompletedEventHandler(downloader_OpenReadCompleted);
             downloader.OpenReadAsync(serviceUri);
@@ -32,8 +32,11 @@ namespace Bigrivers.Client.ConsoleClient
                     jsontext = reader.ReadToEnd();
                 }
 
-                List<Artist> l = JsonConvert.DeserializeObject<List<Artist>>(jsontext);
+                Console.WriteLine("JSON answer: \n " + jsontext + "\n");
 
+                //List<Artist> l = JsonConvert.DeserializeObject<List<Artist>>(jsontext);
+
+               // Console.WriteLine("Artists received: " + l.Count.ToString() );
 
                 // Continue working with responseStream here...
             }
