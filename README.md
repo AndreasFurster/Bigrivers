@@ -1,8 +1,8 @@
-Bigrivers
-=========
+## Bigrivers
 
-Todo's in Trello: https://trello.com/b/oHRXtkre/big-rivers
+Todo's in **[Trello](https://trello.com/b/oHRXtkre/big-rivers "Bigrivers Trello Board")**
 
+Webservice **[OData Url Conventions](http://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part2-url-conventions/odata-v4.0-errata02-os-part2-url-conventions-complete.html#_Toc406398071)**
 
 Sourcetree instellen voor eerste gebruik
 ==================================================
@@ -12,17 +12,21 @@ Ik heb VS2013 en Sourcetree en een github account.
 
 Ik kan in Sourcetree een bestaande repo klonen door te verbinden met https://github.com/andreasfurster/bigrivers
 
+<<<<<<< HEAD
 nu maakt sourcetree verbinding met de master branch
+=======
+Nu maakt sourcetree verbinding met de master branch
+>>>>>>> master
 
 Klik daarna op de knop GitFlow.
 de standaard invulling is prima.
 production branch = master
 development branch = devel
 
-branch prefix =
-...feature/
-...release/
-...hotfix/
+branch prefix =  
+...feature/  
+...release/  
+...hotfix/  
 
 Nu zie je in sourcetree twee branches: develop en master
 
@@ -33,7 +37,9 @@ Ik wil de laatste develop versie binnenhalen
 - pull from remote origin, pull branch develop
 - volg nu de stappen in readme.md om database te recreeren
 
-Steps to recreate development environment from github
+
+Steps to recreate development environment from Github
+
 ======================================================
 - pull develop branch from github  https://github.com/AndreasFurster/Bigrivers
 - open solution file in visual studio 2013
@@ -74,4 +80,3 @@ geef de feature een beschrijvende naam van ongeveer 30 karakters, bijvoorbeeld: 
 - push changes to feature/....  (Zet develop en master uit)
 - klik gitflow en kies "finish feature". 
 - push naar develop
-
