@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,18 +8,19 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>31784edc-05a7-46ea-8db2-6765b79b2aa1</ProjectGuid>
+    <ProjectGuid>{FCF0A8AC-8297-41C4-B9A8-B8F3D8BAD795}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Bigrivers.Client.WebApplication</RootNamespace>
     <AssemblyName>Bigrivers.Client.WebApplication</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,30 +59,103 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Index.html" />
+    <Content Include="Scripts\BigriversAccessLayer.js" />
+    <Content Include="CommandLine.dll" />
+    <Content Include="JayData_readme.txt" />
+    <Content Include="JaySvcUtil.exe" />
+    <Content Include="packages.config" />
+    <None Include="Scripts\jquery-1.8.0.intellisense.js" />
+    <Content Include="Scripts\datajs-1.0.3.js" />
+    <Content Include="Scripts\datajs-1.0.3.min.js" />
+    <None Include="Scripts\jaydata-vsdoc.js" />
+    <Content Include="Scripts\jaydata.js" />
+    <Content Include="Scripts\jaydata.min.js" />
+    <Content Include="Scripts\jaydatamodules\angular.js" />
+    <Content Include="Scripts\jaydatamodules\angular.min.js" />
+    <Content Include="Scripts\jaydatamodules\deferred.js" />
+    <Content Include="Scripts\jaydatamodules\deferred.min.js" />
+    <Content Include="Scripts\jaydatamodules\errorhandler.js" />
+    <Content Include="Scripts\jaydatamodules\errorhandler.min.js" />
+    <Content Include="Scripts\jaydatamodules\formBinder.js" />
+    <Content Include="Scripts\jaydatamodules\formBinder.min.js" />
+    <Content Include="Scripts\jaydatamodules\handlebars.js" />
+    <Content Include="Scripts\jaydatamodules\inMemory.js" />
+    <Content Include="Scripts\jaydatamodules\inMemory.min.js" />
+    <Content Include="Scripts\jaydatamodules\jaydata.mscrm.js" />
+    <Content Include="Scripts\jaydatamodules\jaydata.mscrm.min.js" />
+    <Content Include="Scripts\jaydatamodules\jaydata.mscrm.server.js" />
+    <Content Include="Scripts\jaydatamodules\jaydata.mscrm.server.min.js" />
+    <Content Include="Scripts\jaydatamodules\kendo.js" />
+    <Content Include="Scripts\jaydatamodules\kendo.min.js" />
+    <Content Include="Scripts\jaydatamodules\knockout.js" />
+    <Content Include="Scripts\jaydatamodules\knockout.min.js" />
+    <Content Include="Scripts\jaydatamodules\NoBatch.min.js" />
+    <Content Include="Scripts\jaydatamodules\qDeferred.js" />
+    <Content Include="Scripts\jaydatamodules\qDeferred.min.js" />
+    <Content Include="Scripts\jaydatamodules\sencha.js" />
+    <Content Include="Scripts\jaydatamodules\sencha.min.js" />
+    <Content Include="Scripts\jaydatamodules\template.js" />
+    <Content Include="Scripts\jaydatamodules\template.min.js" />
+    <Content Include="Scripts\jaydatamodules\validate.js" />
+    <Content Include="Scripts\jaydatamodules\validate.min.js" />
+    <Content Include="Scripts\jaydataproviders\FacebookProvider.js" />
+    <Content Include="Scripts\jaydataproviders\FacebookProvider.min.js" />
+    <Content Include="Scripts\jaydataproviders\IndexedDbProvider.js" />
+    <Content Include="Scripts\jaydataproviders\IndexedDbProvider.min.js" />
+    <Content Include="Scripts\jaydataproviders\InMemoryProvider.js" />
+    <Content Include="Scripts\jaydataproviders\InMemoryProvider.min.js" />
+    <Content Include="Scripts\jaydataproviders\MongoDbProvider.js" />
+    <Content Include="Scripts\jaydataproviders\MongoDbProvider.min.js" />
+    <Content Include="Scripts\jaydataproviders\oDataProvider.js" />
+    <Content Include="Scripts\jaydataproviders\oDataProvider.min.js" />
+    <Content Include="Scripts\jaydataproviders\SqLiteProvider.js" />
+    <Content Include="Scripts\jaydataproviders\SqLiteProvider.min.js" />
+    <Content Include="Scripts\jaydataproviders\StormProvider.js" />
+    <Content Include="Scripts\jaydataproviders\StormProvider.min.js" />
+    <Content Include="Scripts\jaydataproviders\WebApiProvider.js" />
+    <Content Include="Scripts\jaydataproviders\WebApiProvider.min.js" />
+    <Content Include="Scripts\jaydataproviders\YQLProvider.js" />
+    <Content Include="Scripts\jaydataproviders\YQLProvider.min.js" />
+    <Content Include="Scripts\jquery-1.8.0.js" />
+    <Content Include="Scripts\jquery-1.8.0.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\BigriversAccessLayer.d.ts" />
+    <TypeScriptCompile Include="Scripts\jaydata.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>1661</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost:1520/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
