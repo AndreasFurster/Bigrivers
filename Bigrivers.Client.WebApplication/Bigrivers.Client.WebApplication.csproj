@@ -68,7 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Index.html" />
-    <Content Include="Scripts\BigriversAccessLayer.js" />
     <Content Include="CommandLine.dll" />
     <Content Include="JayData_readme.txt" />
     <Content Include="JaySvcUtil.exe" />
@@ -133,7 +132,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\BigriversAccessLayer.d.ts" />
     <TypeScriptCompile Include="Scripts\jaydata.d.ts" />
   </ItemGroup>
   <ItemGroup>
