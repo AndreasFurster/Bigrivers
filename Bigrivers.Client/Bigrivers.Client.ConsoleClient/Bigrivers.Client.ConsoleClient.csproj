@@ -57,10 +57,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BigriversProxy.cs">
+    <Compile Include="BigriversDAL.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BigriversProxy.tt</DependentUpon>
+      <DependentUpon>BigriversDAL.tt</DependentUpon>
     </Compile>
     <Compile Include="Communicator.cs" />
     <Compile Include="Program.cs" />
@@ -68,18 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="BigriversProxy.tt">
+    <None Include="BigriversDAL.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BigriversProxy.cs</LastGenOutput>
+      <LastGenOutput>BigriversDAL.cs</LastGenOutput>
     </None>
-    <None Include="BigriversProxy.ttinclude" />
+    <None Include="BigriversDAL.ttinclude" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Bigrivers.Server\Bigrivers.Server.Model\Bigrivers.Server.Model.csproj">
-      <Project>{6cf12e3b-53d8-46e9-8fc6-b241a645877c}</Project>
-      <Name>Bigrivers.Server.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

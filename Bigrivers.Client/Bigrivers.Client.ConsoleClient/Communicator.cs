@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
-using Bigrivers.Server.Model;
 using Newtonsoft.Json;
 
 namespace Bigrivers.Client.ConsoleClient
@@ -36,7 +35,7 @@ namespace Bigrivers.Client.ConsoleClient
 
                 //List<Artist> l = JsonConvert.DeserializeObject<List<Artist>>(jsontext);
 
-               // Console.WriteLine("Artists received: " + l.Count.ToString() );
+                // Console.WriteLine("Artists received: " + l.Count.ToString() );
 
                 // Continue working with responseStream here...
                 Console.WriteLine("now lets implement conversion to objects...");

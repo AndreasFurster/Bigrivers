@@ -1,4 +1,4 @@
-﻿<#@ include file="BigriversProxy.ttinclude" #>
+﻿<#@ include file="BigriversDAL.ttinclude" #>
 <#+
 public static class Configuration
 {

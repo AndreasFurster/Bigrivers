@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 6-1-2015 22:51:46
+// Generation date: 10-1-2015 18:20:17
 namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
 {
     /// <summary>

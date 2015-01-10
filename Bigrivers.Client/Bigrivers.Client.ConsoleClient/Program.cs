@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
-using Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model;
-using Bigrivers.Client.ConsoleClient.Default;
 using Microsoft.OData.Client;
+using Bigrivers.Client.ConsoleClient.Default;
+using Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model;
 
 namespace Bigrivers.Client.ConsoleClient
 {
@@ -63,7 +63,7 @@ namespace Bigrivers.Client.ConsoleClient
             Console.WriteLine("");
             foreach (var sponsor in listOfActiveSponsors)
             {
-                    Console.WriteLine("{0} is actief als sponsor", sponsor.Name);
+                Console.WriteLine("{0} is actief als sponsor", sponsor.Name);
             }
 
             // Create Sponsors
@@ -81,7 +81,7 @@ namespace Bigrivers.Client.ConsoleClient
 
                 newSponsor.Priority = 0;
                 newSponsor.Status = true;
-                
+
                 container.AddToSponsors(newSponsor);
 
                 DataServiceResponse response = container.SaveChanges();
@@ -103,10 +103,10 @@ namespace Bigrivers.Client.ConsoleClient
                 {
                     Console.Write("\n \n Huidige Naam: {0}", sponsor.Name);
                     Console.Write("\n Huidige Url: {0}", sponsor.Url);
-                        
+
                     Console.Write("\n \n Nieuwe Naam: ");
                     sponsor.Name = Console.ReadLine();
-                        
+
                     Console.Write("\n Nieuwe Url: ");
                     sponsor.Url = Console.ReadLine();
 
