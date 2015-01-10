@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Linq;
-using Microsoft.OData.Client;
-using Bigrivers.Client.ConsoleClient.Default;
 using Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model;
+using Bigrivers.Client.ConsoleClient.Default;
 
 namespace Bigrivers.Client.ConsoleClient
 {
@@ -53,12 +52,12 @@ namespace Bigrivers.Client.ConsoleClient
 
                 container.AddToArtists(newArtist);
 
-                DataServiceResponse response = container.SaveChanges();
+                var response = container.SaveChanges();
                 Console.WriteLine("\n \n {0}", response);
             }
 
             // Read Sponsors
-            var listOfActiveSponsors = container.Sponsors.Where(a => a.Status != false).ToList();
+            var listOfActiveSponsors = container.Sponsors.Where(a => a.Status).ToList();
 
             Console.WriteLine("");
             foreach (var sponsor in listOfActiveSponsors)
@@ -84,7 +83,7 @@ namespace Bigrivers.Client.ConsoleClient
 
                 container.AddToSponsors(newSponsor);
 
-                DataServiceResponse response = container.SaveChanges();
+                var response = container.SaveChanges();
                 Console.WriteLine("\n \n De nieuwe sponsor is aangemaakt.");
             }
 
@@ -112,7 +111,7 @@ namespace Bigrivers.Client.ConsoleClient
 
                     container.UpdateObject(sponsor);
 
-                    DataServiceResponse response = container.SaveChanges();
+                    var response = container.SaveChanges();
                     Console.WriteLine("\n \n De sponsor is aangepast");
                 }
                 else
@@ -140,7 +139,7 @@ namespace Bigrivers.Client.ConsoleClient
                     if (Console.ReadLine().ToLower() == "j")
                     {
                         container.DeleteObject(sponsor);
-                        DataServiceResponse response = container.SaveChanges();
+                        var response = container.SaveChanges();
                         Console.WriteLine("\n \n De sponsor is verwijderd!");
                     }
                     else
