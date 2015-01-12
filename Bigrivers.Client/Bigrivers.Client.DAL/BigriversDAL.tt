@@ -1,4 +1,4 @@
-﻿<#@ include file="BigriversProxy.ttinclude" #>
+﻿<#@ include file="BigriversDAL.ttinclude" #>
 <#+
 public static class Configuration
 {
@@ -13,7 +13,7 @@ public static class Configuration
 
 	// The namespace of the client code generated. It replaces the original namspace in the metadata document, 
     // unless the model has several namespaces.
-	public const string NamespacePrefix = "Bigrivers.Client.ConsoleClient";
+	public const string NamespacePrefix = "Bigrivers.Client.DAL";
 
 	// The target language of the generated client code. The value must be set to "CSharp" or "VB".
 	public const string TargetLanguage = "CSharp";

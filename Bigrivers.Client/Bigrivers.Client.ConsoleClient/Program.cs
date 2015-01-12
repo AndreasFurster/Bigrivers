@@ -1,26 +1,21 @@
 ﻿using System;
+using System.Configuration;
 using System.Linq;
-using Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model;
-using Bigrivers.Client.ConsoleClient.Default;
-using Microsoft.OData.Client;
+using Bigrivers.Client.DAL.Default;
+using Bigrivers.Client.DAL.Bigrivers.Server.Model;
 
 namespace Bigrivers.Client.ConsoleClient
 {
     internal class Program
     {
+        // Create AccessLayer with Uri from the App.Config
+        static readonly Container AccessLayer = new Container(new Uri(ConfigurationManager.AppSettings["WebserviceUri"]));
+
         private static void Main(string[] args)
         {
             Console.WriteLine("Hallo!");
 
-            // send webservice request to localhost:<port>/api/Artist/Index
-            //Communicator c = new Communicator();
-
-            //c.HowToMakeRequestsToHttpBasedServices();
-
-            var odataUri = new Uri("http://localhost:54240/odata");
-            var container = new Container(odataUri);
-
-            var listOfRealArtists = container.Artists.Where(a => a.Name != "Justin Bieber").ToList();
+            var listOfRealArtists = AccessLayer.Artists.Where(a => a.Name != "Justin Bieber").ToList();
 
             foreach (var artist in listOfRealArtists)
             {
@@ -51,19 +46,19 @@ namespace Bigrivers.Client.ConsoleClient
                 Console.Write("Twitter: ");
                 newArtist.Twitter = Console.ReadLine();
 
-                container.AddToArtists(newArtist);
+                AccessLayer.AddToArtists(newArtist);
 
-                DataServiceResponse response = container.SaveChanges();
+                var response = AccessLayer.SaveChanges();
                 Console.WriteLine("\n \n {0}", response);
             }
 
             // Read Sponsors
-            var listOfActiveSponsors = container.Sponsors.Where(a => a.Status != false).ToList();
+            var listOfActiveSponsors = AccessLayer.Sponsors.Where(a => a.Status).ToList();
 
             Console.WriteLine("");
             foreach (var sponsor in listOfActiveSponsors)
             {
-                    Console.WriteLine("{0} is actief als sponsor", sponsor.Name);
+                Console.WriteLine("{0} is actief als sponsor", sponsor.Name);
             }
 
             // Create Sponsors
@@ -81,10 +76,10 @@ namespace Bigrivers.Client.ConsoleClient
 
                 newSponsor.Priority = 0;
                 newSponsor.Status = true;
-                
-                container.AddToSponsors(newSponsor);
 
-                DataServiceResponse response = container.SaveChanges();
+                AccessLayer.AddToSponsors(newSponsor);
+
+                var response = AccessLayer.SaveChanges();
                 Console.WriteLine("\n \n De nieuwe sponsor is aangemaakt.");
             }
 
@@ -96,23 +91,23 @@ namespace Bigrivers.Client.ConsoleClient
                 Console.WriteLine("\n \n Welke sponsor wil je aanpassen? (Naam)");
                 var userInput = Console.ReadLine();
 
-                var sponsor = container.Sponsors.Where(a => a.Name == userInput).FirstOrDefault();
+                var sponsor = AccessLayer.Sponsors.Where(a => a.Name == userInput).FirstOrDefault();
 
                 // Check if Sponsor name is valid!
                 if (sponsor != null)
                 {
                     Console.Write("\n \n Huidige Naam: {0}", sponsor.Name);
                     Console.Write("\n Huidige Url: {0}", sponsor.Url);
-                        
+
                     Console.Write("\n \n Nieuwe Naam: ");
                     sponsor.Name = Console.ReadLine();
-                        
+
                     Console.Write("\n Nieuwe Url: ");
                     sponsor.Url = Console.ReadLine();
 
-                    container.UpdateObject(sponsor);
+                    AccessLayer.UpdateObject(sponsor);
 
-                    DataServiceResponse response = container.SaveChanges();
+                    var response = AccessLayer.SaveChanges();
                     Console.WriteLine("\n \n De sponsor is aangepast");
                 }
                 else
@@ -129,7 +124,7 @@ namespace Bigrivers.Client.ConsoleClient
                 Console.WriteLine("\n \n Welke sponsor wil je verwijderen? (Naam)");
                 var userInput = Console.ReadLine();
 
-                var sponsor = container.Sponsors.Where(a => a.Name == userInput).FirstOrDefault();
+                var sponsor = AccessLayer.Sponsors.Where(a => a.Name == userInput).FirstOrDefault();
 
                 // Check if Sponsor name is valid
                 if (sponsor != null)
@@ -139,8 +134,8 @@ namespace Bigrivers.Client.ConsoleClient
 
                     if (Console.ReadLine().ToLower() == "j")
                     {
-                        container.DeleteObject(sponsor);
-                        DataServiceResponse response = container.SaveChanges();
+                        AccessLayer.DeleteObject(sponsor);
+                        var response = AccessLayer.SaveChanges();
                         Console.WriteLine("\n \n De sponsor is verwijderd!");
                     }
                     else
