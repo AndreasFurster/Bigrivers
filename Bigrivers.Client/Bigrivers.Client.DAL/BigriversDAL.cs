@@ -8,8 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generation date: 10-1-2015 18:20:17
-namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
+// Generation date: 12-1-2015 13:28:40
+namespace Bigrivers.Client.DAL.Bigrivers.Server.Model
 {
     /// <summary>
     /// There are no comments for ArtistSingle in the schema.
@@ -32,7 +32,7 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
         /// There are no comments for Performances in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance> Performances
+        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance> Performances
         {
             get
             {
@@ -42,18 +42,18 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
                 }
                 if ((this._Performances == null))
                 {
-                    this._Performances = Context.CreateQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance>(GetPath("Performances"));
+                    this._Performances = Context.CreateQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance>(GetPath("Performances"));
                 }
                 return this._Performances;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance> _Performances;
+        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance> _Performances;
         /// <summary>
         /// There are no comments for Genres in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre> Genres
+        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre> Genres
         {
             get
             {
@@ -63,13 +63,13 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
                 }
                 if ((this._Genres == null))
                 {
-                    this._Genres = Context.CreateQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre>(GetPath("Genres"));
+                    this._Genres = Context.CreateQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre>(GetPath("Genres"));
                 }
                 return this._Genres;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre> _Genres;
+        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre> _Genres;
     }
     /// <summary>
     /// There are no comments for Artist in the schema.
@@ -306,7 +306,7 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
         [global::Microsoft.OData.Client.OriginalNameAttribute("Performances")]
-        public global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance> Performances
+        public global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance> Performances
         {
             get
             {
@@ -321,15 +321,15 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance> _Performances = new global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance>(null, global::Microsoft.OData.Client.TrackingMode.None);
-        partial void OnPerformancesChanging(global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance> value);
+        private global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance> _Performances = new global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance>(null, global::Microsoft.OData.Client.TrackingMode.None);
+        partial void OnPerformancesChanging(global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance> value);
         partial void OnPerformancesChanged();
         /// <summary>
         /// There are no comments for Property Genres in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
         [global::Microsoft.OData.Client.OriginalNameAttribute("Genres")]
-        public global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre> Genres
+        public global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre> Genres
         {
             get
             {
@@ -344,8 +344,8 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre> _Genres = new global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre>(null, global::Microsoft.OData.Client.TrackingMode.None);
-        partial void OnGenresChanging(global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre> value);
+        private global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre> _Genres = new global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre>(null, global::Microsoft.OData.Client.TrackingMode.None);
+        partial void OnGenresChanging(global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre> value);
         partial void OnGenresChanged();
         /// <summary>
         /// This event is raised when the value of the property is changed
@@ -386,7 +386,7 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
         /// There are no comments for Performances in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance> Performances
+        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance> Performances
         {
             get
             {
@@ -396,18 +396,18 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
                 }
                 if ((this._Performances == null))
                 {
-                    this._Performances = Context.CreateQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance>(GetPath("Performances"));
+                    this._Performances = Context.CreateQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance>(GetPath("Performances"));
                 }
                 return this._Performances;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance> _Performances;
+        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance> _Performances;
         /// <summary>
         /// There are no comments for Location in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.LocationSingle Location
+        public global::Bigrivers.Client.DAL.Bigrivers.Server.Model.LocationSingle Location
         {
             get
             {
@@ -417,13 +417,13 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
                 }
                 if ((this._Location == null))
                 {
-                    this._Location = new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.LocationSingle(this.Context, GetPath("Location"));
+                    this._Location = new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.LocationSingle(this.Context, GetPath("Location"));
                 }
                 return this._Location;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.LocationSingle _Location;
+        private global::Bigrivers.Client.DAL.Bigrivers.Server.Model.LocationSingle _Location;
     }
     /// <summary>
     /// There are no comments for Event in the schema.
@@ -696,7 +696,7 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
         [global::Microsoft.OData.Client.OriginalNameAttribute("Performances")]
-        public global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance> Performances
+        public global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance> Performances
         {
             get
             {
@@ -711,15 +711,15 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance> _Performances = new global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance>(null, global::Microsoft.OData.Client.TrackingMode.None);
-        partial void OnPerformancesChanging(global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance> value);
+        private global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance> _Performances = new global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance>(null, global::Microsoft.OData.Client.TrackingMode.None);
+        partial void OnPerformancesChanging(global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance> value);
         partial void OnPerformancesChanged();
         /// <summary>
         /// There are no comments for Property Location in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
         [global::Microsoft.OData.Client.OriginalNameAttribute("Location")]
-        public global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Location Location
+        public global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Location Location
         {
             get
             {
@@ -734,8 +734,8 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Location _Location;
-        partial void OnLocationChanging(global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Location value);
+        private global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Location _Location;
+        partial void OnLocationChanging(global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Location value);
         partial void OnLocationChanged();
         /// <summary>
         /// This event is raised when the value of the property is changed
@@ -776,7 +776,7 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
         /// There are no comments for Artists in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist> Artists
+        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist> Artists
         {
             get
             {
@@ -786,13 +786,13 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
                 }
                 if ((this._Artists == null))
                 {
-                    this._Artists = Context.CreateQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist>(GetPath("Artists"));
+                    this._Artists = Context.CreateQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist>(GetPath("Artists"));
                 }
                 return this._Artists;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist> _Artists;
+        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist> _Artists;
     }
     /// <summary>
     /// There are no comments for Genre in the schema.
@@ -866,7 +866,7 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
         [global::Microsoft.OData.Client.OriginalNameAttribute("Artists")]
-        public global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist> Artists
+        public global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist> Artists
         {
             get
             {
@@ -881,8 +881,8 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist> _Artists = new global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist>(null, global::Microsoft.OData.Client.TrackingMode.None);
-        partial void OnArtistsChanging(global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist> value);
+        private global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist> _Artists = new global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist>(null, global::Microsoft.OData.Client.TrackingMode.None);
+        partial void OnArtistsChanging(global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist> value);
         partial void OnArtistsChanged();
         /// <summary>
         /// This event is raised when the value of the property is changed
@@ -923,7 +923,7 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
         /// There are no comments for Events in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event> Events
+        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event> Events
         {
             get
             {
@@ -933,13 +933,13 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
                 }
                 if ((this._Events == null))
                 {
-                    this._Events = Context.CreateQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event>(GetPath("Events"));
+                    this._Events = Context.CreateQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event>(GetPath("Events"));
                 }
                 return this._Events;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event> _Events;
+        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event> _Events;
     }
     /// <summary>
     /// There are no comments for Location in the schema.
@@ -1107,7 +1107,7 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
         [global::Microsoft.OData.Client.OriginalNameAttribute("Events")]
-        public global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event> Events
+        public global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event> Events
         {
             get
             {
@@ -1122,8 +1122,8 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event> _Events = new global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event>(null, global::Microsoft.OData.Client.TrackingMode.None);
-        partial void OnEventsChanging(global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event> value);
+        private global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event> _Events = new global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event>(null, global::Microsoft.OData.Client.TrackingMode.None);
+        partial void OnEventsChanging(global::Microsoft.OData.Client.DataServiceCollection<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event> value);
         partial void OnEventsChanged();
         /// <summary>
         /// This event is raised when the value of the property is changed
@@ -1164,7 +1164,7 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
         /// There are no comments for Artist in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.ArtistSingle Artist
+        public global::Bigrivers.Client.DAL.Bigrivers.Server.Model.ArtistSingle Artist
         {
             get
             {
@@ -1174,18 +1174,18 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
                 }
                 if ((this._Artist == null))
                 {
-                    this._Artist = new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.ArtistSingle(this.Context, GetPath("Artist"));
+                    this._Artist = new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.ArtistSingle(this.Context, GetPath("Artist"));
                 }
                 return this._Artist;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.ArtistSingle _Artist;
+        private global::Bigrivers.Client.DAL.Bigrivers.Server.Model.ArtistSingle _Artist;
         /// <summary>
         /// There are no comments for Event in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.EventSingle Event
+        public global::Bigrivers.Client.DAL.Bigrivers.Server.Model.EventSingle Event
         {
             get
             {
@@ -1195,13 +1195,13 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
                 }
                 if ((this._Event == null))
                 {
-                    this._Event = new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.EventSingle(this.Context, GetPath("Event"));
+                    this._Event = new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.EventSingle(this.Context, GetPath("Event"));
                 }
                 return this._Event;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.EventSingle _Event;
+        private global::Bigrivers.Client.DAL.Bigrivers.Server.Model.EventSingle _Event;
     }
     /// <summary>
     /// There are no comments for Performance in the schema.
@@ -1350,7 +1350,7 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
         [global::Microsoft.OData.Client.OriginalNameAttribute("Artist")]
-        public global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist Artist
+        public global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist Artist
         {
             get
             {
@@ -1365,15 +1365,15 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist _Artist;
-        partial void OnArtistChanging(global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist value);
+        private global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist _Artist;
+        partial void OnArtistChanging(global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist value);
         partial void OnArtistChanged();
         /// <summary>
         /// There are no comments for Property Event in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
         [global::Microsoft.OData.Client.OriginalNameAttribute("Event")]
-        public global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event Event
+        public global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event Event
         {
             get
             {
@@ -1388,8 +1388,8 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event _Event;
-        partial void OnEventChanging(global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event value);
+        private global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event _Event;
+        partial void OnEventChanging(global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event value);
         partial void OnEventChanged();
         /// <summary>
         /// This event is raised when the value of the property is changed
@@ -1614,146 +1614,146 @@ namespace Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model
     public static class ExtensionMethods
     {
         /// <summary>
-        /// Get an entity of type global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist as global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.ArtistSingle specified by key from an entity set
+        /// Get an entity of type global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist as global::Bigrivers.Client.DAL.Bigrivers.Server.Model.ArtistSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
         /// <param name="keys">dictionary with the names and values of keys</param>
-        public static global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.ArtistSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist> source, global::System.Collections.Generic.Dictionary<string, object> keys)
+        public static global::Bigrivers.Client.DAL.Bigrivers.Server.Model.ArtistSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist> source, global::System.Collections.Generic.Dictionary<string, object> keys)
         {
-            return new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.ArtistSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+            return new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.ArtistSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
-        /// Get an entity of type global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist as global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.ArtistSingle specified by key from an entity set
+        /// Get an entity of type global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist as global::Bigrivers.Client.DAL.Bigrivers.Server.Model.ArtistSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
         /// <param name="id">The value of id</param>
-        public static global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.ArtistSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist> source,
+        public static global::Bigrivers.Client.DAL.Bigrivers.Server.Model.ArtistSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist> source,
             int id)
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
                 { "Id", id }
             };
-            return new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.ArtistSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+            return new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.ArtistSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
-        /// Get an entity of type global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event as global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.EventSingle specified by key from an entity set
+        /// Get an entity of type global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event as global::Bigrivers.Client.DAL.Bigrivers.Server.Model.EventSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
         /// <param name="keys">dictionary with the names and values of keys</param>
-        public static global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.EventSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event> source, global::System.Collections.Generic.Dictionary<string, object> keys)
+        public static global::Bigrivers.Client.DAL.Bigrivers.Server.Model.EventSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event> source, global::System.Collections.Generic.Dictionary<string, object> keys)
         {
-            return new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.EventSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+            return new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.EventSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
-        /// Get an entity of type global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event as global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.EventSingle specified by key from an entity set
+        /// Get an entity of type global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event as global::Bigrivers.Client.DAL.Bigrivers.Server.Model.EventSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
         /// <param name="id">The value of id</param>
-        public static global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.EventSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event> source,
+        public static global::Bigrivers.Client.DAL.Bigrivers.Server.Model.EventSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event> source,
             int id)
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
                 { "Id", id }
             };
-            return new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.EventSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+            return new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.EventSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
-        /// Get an entity of type global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre as global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.GenreSingle specified by key from an entity set
+        /// Get an entity of type global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre as global::Bigrivers.Client.DAL.Bigrivers.Server.Model.GenreSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
         /// <param name="keys">dictionary with the names and values of keys</param>
-        public static global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.GenreSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre> source, global::System.Collections.Generic.Dictionary<string, object> keys)
+        public static global::Bigrivers.Client.DAL.Bigrivers.Server.Model.GenreSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre> source, global::System.Collections.Generic.Dictionary<string, object> keys)
         {
-            return new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.GenreSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+            return new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.GenreSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
-        /// Get an entity of type global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre as global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.GenreSingle specified by key from an entity set
+        /// Get an entity of type global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre as global::Bigrivers.Client.DAL.Bigrivers.Server.Model.GenreSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
         /// <param name="id">The value of id</param>
-        public static global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.GenreSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre> source,
+        public static global::Bigrivers.Client.DAL.Bigrivers.Server.Model.GenreSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre> source,
             int id)
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
                 { "Id", id }
             };
-            return new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.GenreSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+            return new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.GenreSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
-        /// Get an entity of type global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Location as global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.LocationSingle specified by key from an entity set
+        /// Get an entity of type global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Location as global::Bigrivers.Client.DAL.Bigrivers.Server.Model.LocationSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
         /// <param name="keys">dictionary with the names and values of keys</param>
-        public static global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.LocationSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Location> source, global::System.Collections.Generic.Dictionary<string, object> keys)
+        public static global::Bigrivers.Client.DAL.Bigrivers.Server.Model.LocationSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Location> source, global::System.Collections.Generic.Dictionary<string, object> keys)
         {
-            return new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.LocationSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+            return new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.LocationSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
-        /// Get an entity of type global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Location as global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.LocationSingle specified by key from an entity set
+        /// Get an entity of type global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Location as global::Bigrivers.Client.DAL.Bigrivers.Server.Model.LocationSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
         /// <param name="id">The value of id</param>
-        public static global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.LocationSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Location> source,
+        public static global::Bigrivers.Client.DAL.Bigrivers.Server.Model.LocationSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Location> source,
             int id)
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
                 { "Id", id }
             };
-            return new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.LocationSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+            return new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.LocationSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
-        /// Get an entity of type global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance as global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.PerformanceSingle specified by key from an entity set
+        /// Get an entity of type global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance as global::Bigrivers.Client.DAL.Bigrivers.Server.Model.PerformanceSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
         /// <param name="keys">dictionary with the names and values of keys</param>
-        public static global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.PerformanceSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance> source, global::System.Collections.Generic.Dictionary<string, object> keys)
+        public static global::Bigrivers.Client.DAL.Bigrivers.Server.Model.PerformanceSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance> source, global::System.Collections.Generic.Dictionary<string, object> keys)
         {
-            return new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.PerformanceSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+            return new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.PerformanceSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
-        /// Get an entity of type global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance as global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.PerformanceSingle specified by key from an entity set
+        /// Get an entity of type global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance as global::Bigrivers.Client.DAL.Bigrivers.Server.Model.PerformanceSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
         /// <param name="id">The value of id</param>
-        public static global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.PerformanceSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance> source,
+        public static global::Bigrivers.Client.DAL.Bigrivers.Server.Model.PerformanceSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance> source,
             int id)
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
                 { "Id", id }
             };
-            return new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.PerformanceSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+            return new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.PerformanceSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
-        /// Get an entity of type global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Sponsor as global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.SponsorSingle specified by key from an entity set
+        /// Get an entity of type global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Sponsor as global::Bigrivers.Client.DAL.Bigrivers.Server.Model.SponsorSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
         /// <param name="keys">dictionary with the names and values of keys</param>
-        public static global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.SponsorSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Sponsor> source, global::System.Collections.Generic.Dictionary<string, object> keys)
+        public static global::Bigrivers.Client.DAL.Bigrivers.Server.Model.SponsorSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Sponsor> source, global::System.Collections.Generic.Dictionary<string, object> keys)
         {
-            return new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.SponsorSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+            return new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.SponsorSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
         /// <summary>
-        /// Get an entity of type global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Sponsor as global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.SponsorSingle specified by key from an entity set
+        /// Get an entity of type global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Sponsor as global::Bigrivers.Client.DAL.Bigrivers.Server.Model.SponsorSingle specified by key from an entity set
         /// </summary>
         /// <param name="source">source entity set</param>
         /// <param name="id">The value of id</param>
-        public static global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.SponsorSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Sponsor> source,
+        public static global::Bigrivers.Client.DAL.Bigrivers.Server.Model.SponsorSingle ByKey(this global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Sponsor> source,
             int id)
         {
             global::System.Collections.Generic.Dictionary<string, object> keys = new global::System.Collections.Generic.Dictionary<string, object>
             {
                 { "Id", id }
             };
-            return new global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.SponsorSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
+            return new global::Bigrivers.Client.DAL.Bigrivers.Server.Model.SponsorSingle(source.Context, source.GetKeyPath(global::Microsoft.OData.Client.Serializer.GetKeyString(source.Context, keys)));
         }
     }
 }
-namespace Bigrivers.Client.ConsoleClient.Default
+namespace Bigrivers.Client.DAL.Default
 {
     /// <summary>
     /// There are no comments for Container in the schema.
@@ -1783,12 +1783,12 @@ namespace Bigrivers.Client.ConsoleClient.Default
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
         protected global::System.Type ResolveTypeFromName(string typeName)
         {
-            global::System.Type resolvedType = this.DefaultResolveType(typeName, "Bigrivers.Server.Model", "Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model");
+            global::System.Type resolvedType = this.DefaultResolveType(typeName, "Bigrivers.Server.Model", "Bigrivers.Client.DAL.Bigrivers.Server.Model");
             if ((resolvedType != null))
             {
                 return resolvedType;
             }
-            resolvedType = this.DefaultResolveType(typeName, "Default", "Bigrivers.Client.ConsoleClient.Default");
+            resolvedType = this.DefaultResolveType(typeName, "Default", "Bigrivers.Client.DAL.Default");
             if ((resolvedType != null))
             {
                 return resolvedType;
@@ -1804,7 +1804,7 @@ namespace Bigrivers.Client.ConsoleClient.Default
         protected string ResolveNameFromType(global::System.Type clientType)
         {
             global::Microsoft.OData.Client.OriginalNameAttribute originalNameAttribute = (global::Microsoft.OData.Client.OriginalNameAttribute)global::System.Linq.Enumerable.SingleOrDefault(global::Microsoft.OData.Client.Utility.GetCustomAttributes(clientType, typeof(global::Microsoft.OData.Client.OriginalNameAttribute), true));
-            if (clientType.Namespace.Equals("Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model", global::System.StringComparison.Ordinal))
+            if (clientType.Namespace.Equals("Bigrivers.Client.DAL.Bigrivers.Server.Model", global::System.StringComparison.Ordinal))
             {
                 if (originalNameAttribute != null)
                 {
@@ -1812,7 +1812,7 @@ namespace Bigrivers.Client.ConsoleClient.Default
                 }
                 return string.Concat("Bigrivers.Server.Model.", clientType.Name);
             }
-            if (clientType.Namespace.Equals("Bigrivers.Client.ConsoleClient.Default", global::System.StringComparison.Ordinal))
+            if (clientType.Namespace.Equals("Bigrivers.Client.DAL.Default", global::System.StringComparison.Ordinal))
             {
                 if (originalNameAttribute != null)
                 {
@@ -1826,109 +1826,109 @@ namespace Bigrivers.Client.ConsoleClient.Default
         /// There are no comments for Artists in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist> Artists
+        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist> Artists
         {
             get
             {
                 if ((this._Artists == null))
                 {
-                    this._Artists = base.CreateQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist>("Artists");
+                    this._Artists = base.CreateQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist>("Artists");
                 }
                 return this._Artists;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist> _Artists;
+        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist> _Artists;
         /// <summary>
         /// There are no comments for Events in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event> Events
+        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event> Events
         {
             get
             {
                 if ((this._Events == null))
                 {
-                    this._Events = base.CreateQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event>("Events");
+                    this._Events = base.CreateQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event>("Events");
                 }
                 return this._Events;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event> _Events;
+        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event> _Events;
         /// <summary>
         /// There are no comments for Genres in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre> Genres
+        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre> Genres
         {
             get
             {
                 if ((this._Genres == null))
                 {
-                    this._Genres = base.CreateQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre>("Genres");
+                    this._Genres = base.CreateQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre>("Genres");
                 }
                 return this._Genres;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre> _Genres;
+        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre> _Genres;
         /// <summary>
         /// There are no comments for Locations in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Location> Locations
+        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Location> Locations
         {
             get
             {
                 if ((this._Locations == null))
                 {
-                    this._Locations = base.CreateQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Location>("Locations");
+                    this._Locations = base.CreateQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Location>("Locations");
                 }
                 return this._Locations;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Location> _Locations;
+        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Location> _Locations;
         /// <summary>
         /// There are no comments for Performances in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance> Performances
+        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance> Performances
         {
             get
             {
                 if ((this._Performances == null))
                 {
-                    this._Performances = base.CreateQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance>("Performances");
+                    this._Performances = base.CreateQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance>("Performances");
                 }
                 return this._Performances;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance> _Performances;
+        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance> _Performances;
         /// <summary>
         /// There are no comments for Sponsors in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Sponsor> Sponsors
+        public global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Sponsor> Sponsors
         {
             get
             {
                 if ((this._Sponsors == null))
                 {
-                    this._Sponsors = base.CreateQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Sponsor>("Sponsors");
+                    this._Sponsors = base.CreateQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Sponsor>("Sponsors");
                 }
                 return this._Sponsors;
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Sponsor> _Sponsors;
+        private global::Microsoft.OData.Client.DataServiceQuery<global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Sponsor> _Sponsors;
         /// <summary>
         /// There are no comments for Artists in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public void AddToArtists(global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Artist artist)
+        public void AddToArtists(global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Artist artist)
         {
             base.AddObject("Artists", artist);
         }
@@ -1936,7 +1936,7 @@ namespace Bigrivers.Client.ConsoleClient.Default
         /// There are no comments for Events in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public void AddToEvents(global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Event @event)
+        public void AddToEvents(global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Event @event)
         {
             base.AddObject("Events", @event);
         }
@@ -1944,7 +1944,7 @@ namespace Bigrivers.Client.ConsoleClient.Default
         /// There are no comments for Genres in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public void AddToGenres(global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Genre genre)
+        public void AddToGenres(global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Genre genre)
         {
             base.AddObject("Genres", genre);
         }
@@ -1952,7 +1952,7 @@ namespace Bigrivers.Client.ConsoleClient.Default
         /// There are no comments for Locations in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public void AddToLocations(global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Location location)
+        public void AddToLocations(global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Location location)
         {
             base.AddObject("Locations", location);
         }
@@ -1960,7 +1960,7 @@ namespace Bigrivers.Client.ConsoleClient.Default
         /// There are no comments for Performances in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public void AddToPerformances(global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Performance performance)
+        public void AddToPerformances(global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Performance performance)
         {
             base.AddObject("Performances", performance);
         }
@@ -1968,7 +1968,7 @@ namespace Bigrivers.Client.ConsoleClient.Default
         /// There are no comments for Sponsors in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.OData.Client.Design.T4", "2.1.0")]
-        public void AddToSponsors(global::Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model.Sponsor sponsor)
+        public void AddToSponsors(global::Bigrivers.Client.DAL.Bigrivers.Server.Model.Sponsor sponsor)
         {
             base.AddObject("Sponsors", sponsor);
         }

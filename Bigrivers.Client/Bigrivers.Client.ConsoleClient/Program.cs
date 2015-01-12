@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Configuration;
 using System.Linq;
-using Bigrivers.Client.ConsoleClient.Bigrivers.Server.Model;
-using Bigrivers.Client.ConsoleClient.Default;
+using Bigrivers.Client.DAL.Default;
+using Bigrivers.Client.DAL.Bigrivers.Server.Model;
 
 namespace Bigrivers.Client.ConsoleClient
 {
