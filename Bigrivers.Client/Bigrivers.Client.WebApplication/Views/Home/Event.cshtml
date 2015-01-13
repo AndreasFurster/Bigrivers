@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Performances in event";
+}
+
+<h2>@ViewBag.EventTitle</h2>
+<ul>
+    @foreach (Performance p in ViewBag.PerformancesList)
+    {
+        <li>
+            @Html.ActionLink(p.Description, "Optreden", new { Id = p.Id })
+        </li>
+    }
+</ul>
