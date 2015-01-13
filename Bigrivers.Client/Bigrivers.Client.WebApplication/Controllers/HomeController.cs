@@ -22,27 +22,29 @@ namespace Bigrivers.Client.WebApplication.Controllers
         public ActionResult Events()
         {
             ViewBag.EventList = AccessLayer.Events
+                .Expand(e => e.Location)
                 .Where(e => e.Status)
                 .ToList();
 
             return View();
         }
 
-        public ActionResult Event(int id)
+        public ActionResult Event(int? id)
         {
+            if (id == null) return RedirectToAction("Events");
+
             Event currentEvent = AccessLayer.Events
                 .Where(e => e.Id == id)
                 .SingleOrDefault();
 
+            ViewBag.CurrentEvent = currentEvent;
+
             if (currentEvent == null) return Redirect(Request.UrlReferrer.ToString());
 
-            ViewBag.EventTitle = currentEvent.Title;
-
             ViewBag.PerformancesList = AccessLayer.Performances
+                .Expand(p => p.Artist)
                 .Where(p => p.Event.Id == currentEvent.Id)
                 .ToList();
-
-
 
             return View();
         }
@@ -57,7 +59,18 @@ namespace Bigrivers.Client.WebApplication.Controllers
             return View();
         }
 
-        public ActionResult Optreden(int id)
+        public ActionResult Optreden(int? id)
+        {
+            if (id == null) return RedirectToAction("Optredens");
+            throw new NotImplementedException();
+        }
+
+        public ActionResult Genre(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ActionResult Artiest(int id)
         {
             throw new NotImplementedException();
         }

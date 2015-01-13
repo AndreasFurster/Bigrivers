@@ -3,11 +3,33 @@
 }
 
 <h1>Events</h1>
-<ul>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Event</th>
+            <th>Locatie</th>
+            <th>Start datum</th>
+            <th>Eind Datum</th>
+        </tr>
+    </thead>
     @foreach (Event e in ViewBag.EventList)
     {
-        <li>
-            @Html.ActionLink(e.Title, "Event", new { Id = e.Id })
-        </li>
+        <tr>
+            <td>
+                @Html.ActionLink(e.Title, "Event", new { Id = e.Id })
+            </td>
+            <td>
+                @if (e.Location != null)
+                {
+                    @e.Location.Street
+                }
+            </td>
+            <td>
+                @e.Start
+            </td>
+            <td>
+                @e.End
+            </td>
+        </tr>
     }
-</ul>
+</table>
