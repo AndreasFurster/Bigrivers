@@ -19,20 +19,20 @@ namespace Bigrivers.Client.WebApplication.Controllers
             return View();
         }
 
-        public ActionResult Events()
+        public ActionResult Events(int? id)
         {
+            if (id != null) return Event(id.Value);
+
             ViewBag.EventList = AccessLayer.Events
                 .Expand(e => e.Location)
                 .Where(e => e.Status)
                 .ToList();
 
-            return View();
+            return View("Events");
         }
 
-        public ActionResult Event(int? id)
+        private ActionResult Event(int id)
         {
-            if (id == null) return RedirectToAction("Events");
-
             Event currentEvent = AccessLayer.Events
                 .Where(e => e.Id == id)
                 .SingleOrDefault();
@@ -46,23 +46,30 @@ namespace Bigrivers.Client.WebApplication.Controllers
                 .Where(p => p.Event.Id == currentEvent.Id)
                 .ToList();
 
-            return View();
+            return View("Event");
         }
 
-        public ActionResult Optredens()
+        public ActionResult Optredens(int? id)
         {
+            if (id != null) return Optreden(id.Value);
+
             ViewBag.PerformancesList = AccessLayer.Performances
                 .Where(p => p.Status)
                 .OrderBy(p => p.Start)
                 .ToList();
 
-            return View();
+            return View("Optredens");
         }
 
-        public ActionResult Optreden(int? id)
+        private ActionResult Optreden(int id)
         {
-            if (id == null) return RedirectToAction("Optredens");
-            throw new NotImplementedException();
+            ViewBag.CurrentPerformance = AccessLayer.Performances
+                .Where(p => p.Id == id && p.Status)
+                .SingleOrDefault();
+
+            if (ViewBag.CurrentPerformance == null) return RedirectToAction("Optredens");
+            
+            return View("Optreden");
         }
 
         public ActionResult Genre(int id)

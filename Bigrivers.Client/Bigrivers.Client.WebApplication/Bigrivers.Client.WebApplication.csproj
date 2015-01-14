@@ -235,6 +235,7 @@
     <Content Include="Views\Home\Event.cshtml" />
     <Content Include="Views\Home\Artiesten.cshtml" />
     <Content Include="Views\Home\Artiest.cshtml" />
+    <Content Include="Views\Home\Optreden.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
