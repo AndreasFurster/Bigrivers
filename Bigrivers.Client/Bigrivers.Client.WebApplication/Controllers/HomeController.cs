@@ -16,6 +16,10 @@ namespace Bigrivers.Client.WebApplication.Controllers
 
         public ActionResult Index()
         {
+            // 'Wake up' Webservice
+
+            AccessLayer.Genres.First();
+
             return View();
         }
 
@@ -86,7 +90,7 @@ namespace Bigrivers.Client.WebApplication.Controllers
                 .Where(g => g.Id == id)
                 .SingleOrDefault();
 
-            if (ViewBag.CurrentGenre == null) RedirectToAction("Genres");
+            if (ViewBag.CurrentGenre == null) return RedirectToAction("Genres");
 
             return View("Genres");
         }
@@ -95,12 +99,22 @@ namespace Bigrivers.Client.WebApplication.Controllers
         {
             if (id != null) return Artiest(id.Value);
 
-            throw new NotImplementedException();
+            ViewBag.ArtistsList = AccessLayer.Artists
+                .Where(a => a.Status)
+                .ToList();
+
+            return View("Artiesten");
         }
 
         private ActionResult Artiest(int id)
         {
-            throw new NotImplementedException();
+            ViewBag.CurrentArtist = AccessLayer.Artists
+                .Where(a => a.Id == id)
+                .SingleOrDefault();
+
+            if (ViewBag.CurrentArtist == null) return RedirectToAction("Artiesten");
+
+            return View("Artiest");
         }
     }
 }
