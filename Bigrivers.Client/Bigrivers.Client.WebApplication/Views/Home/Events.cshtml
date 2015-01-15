@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Events";
+}
+
+<h1>Events</h1>
+<ul>
+    @foreach (Event e in ViewBag.EventList)
+    {
+        <li>
+            @Html.ActionLink(e.Title, "Event", new { Id = e.Id })
+        </li>
+    }
+</ul>
