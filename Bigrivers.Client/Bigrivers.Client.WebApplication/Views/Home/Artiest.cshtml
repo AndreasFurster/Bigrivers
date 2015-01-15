@@ -1,7 +1,10 @@
 ﻿
 @{
-    ViewBag.Title = "Artiest";
+    Artist currentArtist = ViewBag.CurrentArtist;
+    
+    ViewBag.Title = currentArtist.Name;
 }
 
-<h2>Artiest</h2>
+<h2>@currentArtist.Name</h2>
+<p>@currentArtist.Description</p>
 
