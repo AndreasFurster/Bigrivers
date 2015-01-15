@@ -72,12 +72,33 @@ namespace Bigrivers.Client.WebApplication.Controllers
             return View("Optreden");
         }
 
-        public ActionResult Genre(int id)
+        public ActionResult Genres(int? id)
         {
+            if (id != null) return Genre(id.Value);
+
+            ViewBag.GenresList = AccessLayer.Genres;
+
+            return View("Genres");
+        }
+        private ActionResult Genre(int id)
+        {
+            ViewBag.CurrentGenre = AccessLayer.Genres
+                .Where(g => g.Id == id)
+                .SingleOrDefault();
+
+            if (ViewBag.CurrentGenre == null) RedirectToAction("Genres");
+
+            return View("Genres");
+        }
+
+        public ActionResult Artiesten(int? id)
+        {
+            if (id != null) return Artiest(id.Value);
+
             throw new NotImplementedException();
         }
 
-        public ActionResult Artiest(int id)
+        private ActionResult Artiest(int id)
         {
             throw new NotImplementedException();
         }
