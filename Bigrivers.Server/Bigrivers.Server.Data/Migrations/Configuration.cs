@@ -1,13 +1,10 @@
-using Bigrivers.Server.Data;
 using Bigrivers.Server.Model;
 
 namespace Bigrivers.Server.Data.Migrations
 {
     using System;
     using System.Collections.Generic;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<BigriversDb>
     {
@@ -18,49 +15,49 @@ namespace Bigrivers.Server.Data.Migrations
 
         protected override void Seed(BigriversDb context)
         {
+            context.Genres.RemoveRange(context.Genres);
+            context.Locations.RemoveRange(context.Locations);
             context.Artists.RemoveRange(context.Artists);
             context.Events.RemoveRange(context.Events);
             context.Performances.RemoveRange(context.Performances);
-            context.Genres.RemoveRange(context.Genres);
-            context.Locations.RemoveRange(context.Locations);
 
             // Create Genres
-            Genre Rock = new Genre
+            Genre rock = new Genre
             {
                 Name = "Rock",
                 Artists = new List<Artist>()
             };
-            Genre Pop = new Genre
+            Genre pop = new Genre
             {
                 Name = "Pop",
                 Artists = new List<Artist>()
             };
-            Genre Blues = new Genre
+            Genre blues = new Genre
             {
                 Name = "Blues",
                 Artists = new List<Artist>()
             };
-            Genre Techno = new Genre
+            Genre dance = new Genre
             {
                 Name = "Techno",
                 Artists = new List<Artist>()
             };
-            Genre Metal = new Genre
+            Genre metal = new Genre
             {
                 Name = "Metal",
                 Artists = new List<Artist>()
             };
-            Genre Klassiek = new Genre
+            Genre klassiek = new Genre
             {
                 Name = "Klassiek",
                 Artists = new List<Artist>()
             };
-            Genre Nederlands = new Genre
+            Genre nederlands = new Genre
             {
                 Name = "Nederlands",
                 Artists = new List<Artist>()
             };
-            Genre KPop = new Genre
+            Genre kPop = new Genre
             {
                 Name = "K-Pop",
                 Artists = new List<Artist>()
@@ -291,63 +288,63 @@ namespace Bigrivers.Server.Data.Migrations
             };
 
             // Create Events
-            Event TGF = new Event
+            Event tgfEvent = new Event
             {
                 Title = "Teen Girl Fest",
                 Description = "Music for the younger girls, like Justin Bieber and One Direction",
                 ShortDescription = "Music for the younger girls",
-                Start = DateTime.Now,
-                End = DateTime.Now.AddDays(1),
+                Start = DateTime.Now.AddDays(5),
+                End = DateTime.Now.AddDays(5).AddHours(3),
                 Price = 13.37m,
                 TicketRequired = true,
                 Status = true,
                 Performances = new List<Performance>(),
                 Location = Sterrenburg
             };
-            Event BigEverything = new Event
+            Event bigEverythingEvent = new Event
             {
                 Title = "BigEverything",
                 Description = "All kinds of unrelated music stuffed together! Cause why not?",
                 ShortDescription = "All kinds of unrelated music!",
-                Start = DateTime.Now.AddDays(1),
-                End = DateTime.Now.AddDays(2),
+                Start = DateTime.Now.AddDays(4),
+                End = DateTime.Now.AddDays(4).AddHours(6),
                 Price = 13.37m,
                 TicketRequired = true,
                 Status = true,
                 Performances = new List<Performance>(),
             };
-            Event BreakingFree = new Event
+            Event breakingFreeEvent = new Event
             {
                 Title = "Breaking Free",
                 Description = "All kinds of 60's and 70's music, with a main act from Queen!",
                 ShortDescription = "All kinds of 60's and 70's music",
-                Start = DateTime.Now.AddDays(1),
-                End = DateTime.Now.AddDays(2),
+                Start = DateTime.Now.AddDays(2),
+                End = DateTime.Now.AddDays(2).AddHours(3),
                 Price = 13.37m,
                 TicketRequired = true,
                 Status = true,
                 Performances = new List<Performance>(),
             };
-            Event DutchParty = new Event
+            Event dutchPartyEvent = new Event
             {
                 Title = "Dutch Party",
                 Description = "Nederlandse artiesten zoals Jeroen vd Boom, Nick & Simon bij elkaar!",
                 ShortDescription = "Nederlandse artiesten bij elkaar!",
-                Start = DateTime.Now.AddDays(1),
-                End = DateTime.Now.AddDays(2),
+                Start = DateTime.Now.AddDays(3).AddHours(5),
+                End = DateTime.Now.AddDays(3).AddHours(7),
                 Price = 13.37m,
                 TicketRequired = true,
                 Status = true,
                 Performances = new List<Performance>(),
             };
 
-            Event LiveDance = new Event
+            Event liveDanceEvent = new Event
             {
                 Title = "Live Dance",
                 Description = "Dancing music on the big stage!",
                 ShortDescription = "Dancing music!",
-                Start = DateTime.Now.AddDays(1),
-                End = DateTime.Now.AddDays(2),
+                Start = DateTime.Now.AddDays(4).AddHours(7),
+                End = DateTime.Now.AddDays(4).AddHours(11),
                 Price = 13.37m,
                 TicketRequired = true,
                 Status = true,
@@ -355,67 +352,230 @@ namespace Bigrivers.Server.Data.Migrations
             };
 
 
-            // Create Performances
-            Performance QueenBreakingFreeP1 = new Performance
+            // Create Performances for Breakingfree
+            Performance queenBreakingFreePerformanceP1 = new Performance
             {
                 Description = "Queen live at Breaking Free",
-                Start = BreakingFree.Start.AddDays(30),
-                End = BreakingFree.Start.AddDays(30).AddHours(1),
+                Start = breakingFreeEvent.Start,
+                End = breakingFreeEvent.Start.AddHours(1),
                 Status = true,
                 Artist = Queen,
-                Event = BreakingFree
+                Event = breakingFreeEvent
             };
-            Performance BluesBrosBreakingFree = new Performance()
+            Performance bluesBrosBreakingFreePerformance = new Performance()
             {
                 Description = "Blues Brothers at Breaking Free event",
-                Start = QueenBreakingFreeP1.End,
-                End = QueenBreakingFreeP1.End.AddHours(0.5),
+                Start = queenBreakingFreePerformanceP1.End,
+                End = queenBreakingFreePerformanceP1.End.AddHours(0.5),
                 Status = true,
                 Artist = BluesBros,
-                Event = BreakingFree
+                Event = breakingFreeEvent
             };
-            Performance QueenBreakingFreeP2 = new Performance
+            Performance queenBreakingFreePerformanceP2 = new Performance
             {
                 Description = "Queen live at Breaking Free for the second time the evening",
-                Start = BluesBrosBreakingFree.End,
-                End = BluesBrosBreakingFree.End.AddHours(1.5),
+                Start = bluesBrosBreakingFreePerformance.End,
+                End = breakingFreeEvent.End,
                 Status = true,
                 Artist = Queen,
-                Event = BreakingFree
+                Event = breakingFreeEvent
             };
-            Performance BieberFest = new Performance
+
+            // Create Performances for TGF
+            Performance justinBieberTgfPerformance = new Performance
             {
                 Description = "Justin Bieber does stuff",
-                Start = TGF.Start,
-                End = TGF.End,
+                Start = tgfEvent.Start,
+                End = tgfEvent.Start.AddHours(1.5),
                 Status = true,
                 Artist = JusBie,
-                Event = TGF
+                Event = tgfEvent
+            };
+            Performance brunoMarsTgfPerformance = new Performance
+            {
+                Description = "Bruno Mars does stuff",
+                Start = justinBieberTgfPerformance.End,
+                End = tgfEvent.End,
+                Status = true,
+                Artist = BruMar,
+                Event = tgfEvent
             };
 
-            Queen.Performances.Add(QueenBreakingFreeP1);
-            Queen.Genres.Add(Rock);
+            // Create performances for Dutchparty
+            Performance nickEnSimonDutchPartyPerformance = new Performance
+            {
+                Description = "Nick en Simon performance",
+                Start = dutchPartyEvent.Start,
+                End = dutchPartyEvent.Start.AddHours(1),
+                Status = true,
+                Artist = NicSim,
+                Event = dutchPartyEvent
+            };
+            Performance jamaiDutchPartyPerformance = new Performance
+            {
+                Description = "Jamai performance",
+                Start = nickEnSimonDutchPartyPerformance.Start,
+                End = nickEnSimonDutchPartyPerformance.Start.AddHours(1),
+                Status = true,
+                Artist = Jamai,
+                Event = dutchPartyEvent
+            };
 
-            JusBie.Performances.Add(BieberFest);
-            JusBie.Genres.Add(Pop);
+            // Create performances for LiveDance
+            Performance nielsGeusebroekLiveDancePerformanceP1 = new Performance
+            {
+                Description = "Niels Geusebroek performance 1",
+                Start = liveDanceEvent.Start,
+                End = liveDanceEvent.Start.AddHours(0.5),
+                Status = true,
+                Artist = NieGeu,
+                Event = liveDanceEvent
+            };
+            Performance pitbullLiveDancePerformance = new Performance
+            {
+                Description = "Pitbull performance",
+                Start = nielsGeusebroekLiveDancePerformanceP1.End,
+                End = nielsGeusebroekLiveDancePerformanceP1.End.AddHours(1),
+                Status = true,
+                Artist = Pitbull,
+                Event = liveDanceEvent
+            };
+            Performance nielsGeusebroekLiveDancePerformanceP2 = new Performance
+            {
+                Description = "Niels Geusebroek performance 2",
+                Start = pitbullLiveDancePerformance.End,
+                End = pitbullLiveDancePerformance.End.AddHours(1.5),
+                Status = true,
+                Artist = NieGeu,
+                Event = liveDanceEvent
+            };
+            Performance arminVanBuurenLiveDancePerformance = new Performance
+            {
+                Description = "Niels Geusebroek performance",
+                Start = nielsGeusebroekLiveDancePerformanceP2.End,
+                End = liveDanceEvent.End,
+                Status = true,
+                Artist = ArmVBuu,
+                Event = liveDanceEvent
+            };
 
-            BruMar.Genres.Add(Pop);
+            // Add genres to artists
+            Queen.Genres.Add(rock);
+            JusBie.Genres.Add(pop);
+            BruMar.Genres.Add(pop);
+            BluesBros.Genres.Add(blues);
+            Script.Genres.Add(pop);
+            NicSim.Genres.Add(nederlands);
+            Jamai.Genres.Add(nederlands);
+            NieGeu.Genres.Add(dance);
+            Pitbull.Genres.Add(dance);
+            ArmVBuu.Genres.Add(dance);
+            Coldplay.Genres.Add(pop);
+            Psy.Genres.Add(kPop);
+            FooFight.Genres.Add(metal);
+            Bastille.Genres.Add(pop);
 
-            Script.Genres.Add(Pop);
 
-            BluesBros.Genres.Add(Blues);
+            // Add artists to genres
+            rock.Artists.Add(Queen);
+            pop.Artists.Add(JusBie);
+            pop.Artists.Add(BruMar);
+            blues.Artists.Add(BluesBros);
+            pop.Artists.Add(Script);
+            nederlands.Artists.Add(NicSim);
+            nederlands.Artists.Add(Jamai);
+            dance.Artists.Add(ArmVBuu);
+            dance.Artists.Add(Pitbull);
+            dance.Artists.Add(NieGeu);
+            pop.Artists.Add(Coldplay);
+            kPop.Artists.Add(Psy);
+            metal.Artists.Add(FooFight);
+            pop.Artists.Add(Bastille);
+
+            // Add performances to artists
+            Queen.Performances.Add(queenBreakingFreePerformanceP1);
+            Queen.Performances.Add(queenBreakingFreePerformanceP2);
+            BluesBros.Performances.Add(bluesBrosBreakingFreePerformance);
+
+            JusBie.Performances.Add(justinBieberTgfPerformance);
+            BruMar.Performances.Add(brunoMarsTgfPerformance);
+
+            NicSim.Performances.Add(nickEnSimonDutchPartyPerformance);
+            Jamai.Performances.Add(jamaiDutchPartyPerformance);
+
+            NieGeu.Performances.Add(nielsGeusebroekLiveDancePerformanceP1);
+            NieGeu.Performances.Add(nielsGeusebroekLiveDancePerformanceP2);
+            Pitbull.Performances.Add(pitbullLiveDancePerformance);
+            ArmVBuu.Performances.Add(arminVanBuurenLiveDancePerformance);
+
+            // Add performances to events
+            breakingFreeEvent.Performances.Add(queenBreakingFreePerformanceP1);
+            breakingFreeEvent.Performances.Add(bluesBrosBreakingFreePerformance);
+            breakingFreeEvent.Performances.Add(queenBreakingFreePerformanceP2);
+
+            tgfEvent.Performances.Add(justinBieberTgfPerformance);
+            tgfEvent.Performances.Add(brunoMarsTgfPerformance);
+            
+            dutchPartyEvent.Performances.Add(nickEnSimonDutchPartyPerformance);
+            dutchPartyEvent.Performances.Add(jamaiDutchPartyPerformance);
+
+            liveDanceEvent.Performances.Add(nielsGeusebroekLiveDancePerformanceP1);
+            liveDanceEvent.Performances.Add(pitbullLiveDancePerformance);
+            liveDanceEvent.Performances.Add(nielsGeusebroekLiveDancePerformanceP2);
+            liveDanceEvent.Performances.Add(arminVanBuurenLiveDancePerformance);
 
 
+            // Add genres to context
+            context.Genres.AddOrUpdate(rock);
+            context.Genres.AddOrUpdate(pop);
+            context.Genres.AddOrUpdate(blues);
+            context.Genres.AddOrUpdate(metal);
+            context.Genres.AddOrUpdate(dance);
+            context.Genres.AddOrUpdate(nederlands);
+            context.Genres.AddOrUpdate(kPop);
+            context.Genres.AddOrUpdate(klassiek);
 
-            BreakingFree.Performances.Add(QueenBreakingFree);
-            TGF.Performances.Add(BieberFest);
+            // Add locations to context
+            context.Locations.AddOrUpdate(Sterrenburg);
+            context.Locations.AddOrUpdate(LPP);
+            context.Locations.AddOrUpdate(Haven);
+            context.Locations.AddOrUpdate(DordtCentraal);
 
-            Rock.Artists.Add(Queen);
-            Pop.Artists.Add(JusBie);
-            Pop.Artists.Add(BruMar);
+            // Add artists to context
+            context.Artists.AddOrUpdate(Queen);
+            context.Artists.AddOrUpdate(JusBie);
+            context.Artists.AddOrUpdate(BruMar);
+            context.Artists.AddOrUpdate(Psy);
+            context.Artists.AddOrUpdate(Coldplay);
+            context.Artists.AddOrUpdate(Pitbull);
+            context.Artists.AddOrUpdate(NieGeu);
+            context.Artists.AddOrUpdate(ArmVBuu);
+            context.Artists.AddOrUpdate(BluesBros);
+            context.Artists.AddOrUpdate(Script);
+            context.Artists.AddOrUpdate(FooFight);
+            context.Artists.AddOrUpdate(NicSim);
+            context.Artists.AddOrUpdate(Jamai);
+            context.Artists.AddOrUpdate(Bastille);
 
-            context.Genres.AddOrUpdate(Rock);
-            context.Genres.AddOrUpdate(Pop);
+            // Add events to context
+            context.Events.AddOrUpdate(tgfEvent);
+            context.Events.AddOrUpdate(breakingFreeEvent);
+            context.Events.AddOrUpdate(liveDanceEvent);
+            context.Events.AddOrUpdate(dutchPartyEvent);
+            context.Events.AddOrUpdate(bigEverythingEvent);
+
+            // Add performances to context
+            context.Performances.AddOrUpdate(queenBreakingFreePerformanceP1);
+            context.Performances.AddOrUpdate(queenBreakingFreePerformanceP2);
+            context.Performances.AddOrUpdate(bluesBrosBreakingFreePerformance);
+            context.Performances.AddOrUpdate(justinBieberTgfPerformance);
+            context.Performances.AddOrUpdate(brunoMarsTgfPerformance);
+            context.Performances.AddOrUpdate(nickEnSimonDutchPartyPerformance);
+            context.Performances.AddOrUpdate(jamaiDutchPartyPerformance);
+            context.Performances.AddOrUpdate(pitbullLiveDancePerformance);
+            context.Performances.AddOrUpdate(nielsGeusebroekLiveDancePerformanceP1);
+            context.Performances.AddOrUpdate(nielsGeusebroekLiveDancePerformanceP2);
+            context.Performances.AddOrUpdate(arminVanBuurenLiveDancePerformance);
 
             //context.Locations.AddOrUpdate();
             //context.Artists.AddOrUpdate();
