@@ -26,6 +26,7 @@ namespace Bigrivers.Client.WebApplication.Controllers
 
         public ActionResult Index()
         {
+            return RedirectToAction("Events");
             return View();
         }
 
