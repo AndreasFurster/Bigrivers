@@ -237,6 +237,7 @@
     <Content Include="Views\Home\Artiest.cshtml" />
     <Content Include="Views\Home\Optreden.cshtml" />
     <Content Include="Views\Home\Genres.cshtml" />
+    <Content Include="Views\Home\Genre.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -249,6 +250,14 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Bigrivers.Server\Bigrivers.Server.Data\Bigrivers.Server.Data.csproj">
+      <Project>{26178f23-ab38-4b96-89f9-04b580c660db}</Project>
+      <Name>Bigrivers.Server.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Bigrivers.Server\Bigrivers.Server.Model\Bigrivers.Server.Model.csproj">
+      <Project>{6cf12e3b-53d8-46e9-8fc6-b241a645877c}</Project>
+      <Name>Bigrivers.Server.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Bigrivers.Client.DAL\Bigrivers.Client.DAL.csproj">
       <Project>{d7872806-7847-4f24-947e-86cf5fa9298a}</Project>
       <Name>Bigrivers.Client.DAL</Name>

@@ -1,25 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Bigrivers.Client.DAL.Bigrivers.Server.Model;
-using Bigrivers.Client.DAL.Default;
+
+// Via OData
+//using Bigrivers.Client.DAL.Bigrivers.Server.Model;
+//using Bigrivers.Client.DAL.Default;
+
+// Via Direct Reference
+using Bigrivers.Server.Data;
+using Bigrivers.Server.Model;
 
 namespace Bigrivers.Client.WebApplication.Controllers
 {
     public class HomeController : Controller
     {
-        // Create AccessLayer with Uri from the App.Config
-        static readonly Container AccessLayer = new Container(new Uri(ConfigurationManager.AppSettings["WebserviceUri"]));
+        //Create AccessLayer with OData Uri from the App.Config
+        //static readonly Container AccessLayer = new Container(new Uri(ConfigurationManager.AppSettings["WebserviceUri"]));
+
+        //Create AccessLayer with direct reference to Server.Data
+        static readonly BigriversDb AccessLayer = new BigriversDb();
 
         public ActionResult Index()
         {
-            // 'Wake up' Webservice
-
-            AccessLayer.Genres.First();
-
             return View();
         }
 
@@ -28,7 +34,7 @@ namespace Bigrivers.Client.WebApplication.Controllers
             if (id != null) return Event(id.Value);
 
             ViewBag.EventList = AccessLayer.Events
-                .Expand(e => e.Location)
+                .Include(e => e.Location)
                 .Where(e => e.Status)
                 .ToList();
 
@@ -46,7 +52,7 @@ namespace Bigrivers.Client.WebApplication.Controllers
             if (currentEvent == null) return Redirect(Request.UrlReferrer.ToString());
 
             ViewBag.PerformancesList = AccessLayer.Performances
-                .Expand(p => p.Artist)
+                .Include(p => p.Artist)
                 .Where(p => p.Event.Id == currentEvent.Id)
                 .ToList();
 
@@ -80,7 +86,7 @@ namespace Bigrivers.Client.WebApplication.Controllers
         {
             if (id != null) return Genre(id.Value);
 
-            ViewBag.GenresList = AccessLayer.Genres;
+            ViewBag.GenresList = AccessLayer.Genres.ToList();
 
             return View("Genres");
         }
@@ -92,7 +98,7 @@ namespace Bigrivers.Client.WebApplication.Controllers
 
             if (ViewBag.CurrentGenre == null) return RedirectToAction("Genres");
 
-            return View("Genres");
+            return View("Genre");
         }
 
         public ActionResult Artiesten(int? id)
