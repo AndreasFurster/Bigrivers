@@ -20,8 +20,9 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Events", "Events", "Home")</li>
-                    <li>@Html.ActionLink("Optredens", "Optredens", "Home")</li>
+                    <li>@Html.ActionLink("Events", "Events", "Home", new {id = string.Empty}, null)</li>
+                    <li>@Html.ActionLink("Optredens", "Optredens", "Home", new { id = string.Empty }, null)</li>
+                    <li>@Html.ActionLink("Artiesten", "Artiesten", "Home", new { id = string.Empty }, null)</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
