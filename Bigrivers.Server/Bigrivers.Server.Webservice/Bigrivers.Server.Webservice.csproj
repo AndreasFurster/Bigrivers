@@ -140,7 +140,9 @@
   <ItemGroup>
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\ArtistsController.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\GenresController.cs" />
     <Compile Include="Controllers\LocationsController.cs" />
@@ -149,9 +151,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Identity\AccountBindingModels.cs" />
     <Compile Include="Identity\ApplicationUser.cs" />
     <Compile Include="Identity\ApplicationUserManager.cs" />
     <Compile Include="Identity\IdentityDb.cs" />
+    <Compile Include="Identity\ModelFactory.cs" />
     <Compile Include="Migrations\201502101017278_InitialCreate.cs" />
     <Compile Include="Migrations\201502101017278_InitialCreate.Designer.cs">
       <DependentUpon>201502101017278_InitialCreate.cs</DependentUpon>
