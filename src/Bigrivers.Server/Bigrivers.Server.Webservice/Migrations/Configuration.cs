@@ -16,7 +16,7 @@ namespace Bigrivers.Server.Webservice.Migrations
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(Bigrivers.Server.Webservice.Identity.IdentityDb context)
+        protected override void Seed(IdentityDb context)
         {
             //  This method will be called after migrating to the latest version.
             var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new IdentityDb()));

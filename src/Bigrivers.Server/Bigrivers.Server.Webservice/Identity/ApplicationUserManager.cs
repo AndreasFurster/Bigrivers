@@ -39,6 +39,21 @@ namespace Bigrivers.Server.Webservice.Identity
             return appUserManager;
         }
 
+        public dynamic ValidateUser(string username, string password)
+        {
+            //TODO: return validated user
+            return new 
+            { 
+                Status = username != password,
+                Username = "admin",
+                Id = 1
+            };
+        }
 
+        public IEnumerable<string> GetRoles(int id)
+        {
+            //TODO: return roles based by userid
+            return id == 1 ? new[] {"admin", "user"} : new[]{""};
+        }
     }
 }

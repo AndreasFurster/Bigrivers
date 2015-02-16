@@ -3,6 +3,7 @@ using System.Web.OData.Builder;
 using System.Web.OData.Extensions;
 using Bigrivers.Server.Model;
 using Microsoft.OData.Edm;
+using Microsoft.Owin.Security.OAuth;
 
 
 namespace Bigrivers.Server.Webservice
@@ -11,6 +12,9 @@ namespace Bigrivers.Server.Webservice
     {
         public static void Register(HttpConfiguration config)
         {
+            config.SuppressDefaultHostAuthentication();
+            config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 
