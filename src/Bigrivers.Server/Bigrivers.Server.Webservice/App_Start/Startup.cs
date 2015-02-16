@@ -25,7 +25,6 @@ namespace Bigrivers.Server.Webservice
             var config = new HttpConfiguration();
             Database.SetInitializer<BigriversDb>(null);
 
-            
 
             ConfigureAuth(app);
 
@@ -51,12 +50,13 @@ namespace Bigrivers.Server.Webservice
 
 
             // Configure the db context and user manager to use a single instance per request
-            app.CreatePerOwinContext(IdentityDb.Create);
-            app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
+            //app.CreatePerOwinContext(IdentityDb.Create);
+            //app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
 
             // Plugin the OAuth bearer tokens generation and Consumption will be here
             app.UseOAuthBearerTokens(oAuthOptions);
-
+            app.UseOAuthAuthorizationServer(oAuthOptions);
+            app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
         }
 
         private void ConfigureWebApi(HttpConfiguration config)
