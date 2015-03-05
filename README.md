@@ -41,25 +41,43 @@ Ik wil de laatste develop versie binnenhalen
 Steps to recreate development environment from Github
 
 ======================================================
-- pull develop branch from github  https://github.com/AndreasFurster/Bigrivers
-- open solution file in visual studio 2013
-- nuget should retrieve all missing packages
-- rebuild
-- error will show: missing newtonsoft.json reference
-- open project Bigrivers.Client.ConsoleClient
-- from reference, remove "Newtonsoft.Json"
-- add reference, browse to, <solution root>\packages\Newtonsoft.Json.6.0.6\lib\net45
-- rebuild should work now
+1. Weggooien eventuele bestaande code 
+		als je nog een map met de 'bigrivers' solution hebt, gooi die dan weg.
+		Ik had deze opgeslagen in (C:\Users\SNP\Documents\GitSources\Bigrivers)
+		
+2. Weggooien eventuele repository sourcetree 
+		als je in sourcetree al een repository hebt naar https://.......@github.com/AndreasFurster/Bigrivers.git
+		verwijder die dan (reden: sourcetree doet irritant wanneer je de projectmap hebt weggegooid)
 
-- open package manager console
-- change project to Bigrivers.Server.Data
-- give command update-database
-- error will show: No connection string named 'BigriversContext' could be found in the application config file.
-- in solution explorer, rightclick project "Bigrivers.Server.Data" and select "set as startup project"
-- give command update-database
-- now database should be created
-- set "Bigrivers.Server.Webservice" as startup project
-- run
+3. Aanmaken (of opnieuw aanmaken) repository in sourcetree
+		Clone de repository op https://........@github.com/AndreasFurster/Bigrivers.git 
+	
+4. Ophalen van de versie (16-feb-2015 14:47) uit github
+		je krijgt in je \BigRivers\ map nu mapjes \.git  \docs \src, 
+		in de map \src staan mapjes \BigRivers.Client  en  \BigRivers.Server 
+		en BigRivers.sln en Bigrivers.v12.suo
+
+5. Open solution in Visual Studio
+		rechtsklik op solution en klik op "enable nuget package restore"
+		
+6. Open package manager console. Je krijgt een melding: 
+  "some nuget packages are missing from this solution. Click to restore from your online package source".
+	Klik op de knop "restore".
+	
+7. Voer in package manager console het volgende commando in:
+	Update-Package -reinstall 
+	Op een gegeven moment kan de update stoppen om te vragen of je bestaande files wilt overschrijven.
+	Geef antwoord met A en <enter>
+	
+8. rechtsklik solution, set startup projects, kies multiple startup projects,
+	enable "bigrivers.client.webapplication" en "bigrivers.server.webservice".
+	
+9. Rebuild solution
+	
+10. Run 
+	http://localhost:3196/Home/Events toont een lijst met events
+	http://localhost:54240/ geeft foutmelding
+
 
 
 Ik wil een feature gaan toevoegen aan de bestaande code
