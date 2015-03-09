@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div id="wrapper">
+    <h1>Beheer</h1>
+    <div id="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Podium</th>
+                    <th>Auteur</th>
+                    <th>Updated</th>
+                    <th>Acties</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Naam</td>
+                    <td>Auteur</td>
+                    <td>Datum gewijzigd</td>
+                    <td>@Html.ActionLink("Wijzig", "Edit", "Stage") | @Html.ActionLink("Verwijder", "Delete", "Stage")</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
