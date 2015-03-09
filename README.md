@@ -73,7 +73,10 @@ Steps to recreate development environment from Github
 	enable "bigrivers.client.webapplication" en "bigrivers.server.webservice".
 	
 9. Rebuild solution
-	
+
+
+10. Soms is het nodig om Owin te upgraden
+	(Ga via Project, Manage NuGet Packages, zoek via Online,All naar Owin en update deze)
 10. Run 
 	http://localhost:3196/Home/Events toont een lijst met events
 	http://localhost:54240/ geeft foutmelding
