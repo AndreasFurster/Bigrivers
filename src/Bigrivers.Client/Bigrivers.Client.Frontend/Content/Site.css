@@ -3,6 +3,7 @@
     padding-bottom: 20px;
 }
 
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -21,6 +22,9 @@ address{
     color: #FFFFFF;
 }
 
+div.location-canvas{
+    padding-top: 200px;
+}
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
@@ -45,11 +49,21 @@ input[type="checkbox"].input-validation-error {
     border: 0 none;
 }
 
+p.bottomyear{
+    color: white;
+}
+
 .twitterfeed{
     position: absolute;
     width: 100%;
     max-width: 80%;   
 
+}
+
+.menuimg{
+      width: 100px;
+      height: 75px;
+      margin-left: 15px;
 }
 
 .validation-summary-errors {
@@ -62,4 +76,14 @@ input[type="checkbox"].input-validation-error {
 
 .social{
     display:inline;
+}
+
+@media(min-width: 768px ){
+.menuimg{
+    height: 50%;
+    max-height: 50%;
+    width: 50%;
+    max-width: 50%;
+    margin-left: 0px;   
+  }
 }
