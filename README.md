@@ -78,8 +78,6 @@ Steps to recreate development environment from Github
 	http://localhost:3196/Home/Events toont een lijst met events
 	http://localhost:54240/ geeft foutmelding
 
-
-
 Ik wil een feature gaan toevoegen aan de bestaande code
 =======================================================
 open sourcetree
