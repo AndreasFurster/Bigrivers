@@ -8,6 +8,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 20px;
 }
 .body-contact {
       background-color:rgba(0, 0, 0, 0.5);
@@ -15,7 +16,7 @@
       padding-right: 15px;
       padding-top: 15px;
       padding-bottom: 15px;
-      height: 1300px;
+      height: 950px;
 }
 
 address{
